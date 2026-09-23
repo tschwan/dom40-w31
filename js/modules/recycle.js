@@ -57,12 +57,12 @@ window.DOMINIK_MODULES.recycle = (function () {
                 container.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 8px;">
                         <!-- Windows 3.1 Ordner-Toolbar -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
                             <div style="display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: bold;">
                                 <span class="material-symbols-outlined" style="font-size: 16px; color: #000080;">folder_open</span>
                                 <span>C:\\RECYCLE\\*.*</span>
                             </div>
-                            <div style="display: flex; gap: 4px;">
+                            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
                                 <button id="recycle-empty-btn" class="retro-raised-btn" style="padding: 2px 8px; font-size: 11px; display: flex; align-items: center; gap: 4px;">
                                     <span class="material-symbols-outlined" style="font-size: 14px; color: #ba1a1a;">delete</span>
                                     <span>Papierkorb leeren</span>
@@ -75,14 +75,14 @@ window.DOMINIK_MODULES.recycle = (function () {
                         </div>
 
                         <!-- Dateiliste / Icon-Grid -->
-                        <div class="retro-sunken" style="background: #ffffff; padding: 16px; min-height: 280px; max-height: 400px; overflow-y: auto;">
+                        <div class="retro-sunken" style="background: #ffffff; padding: 16px; min-height: 200px; max-height: 400px; overflow-y: auto;">
                             <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-start;">
                                 ${itemsHtml}
                             </div>
                         </div>
 
                         <!-- Statusleiste -->
-                        <div style="display: flex; justify-content: space-between; font-size: 11px; padding: 2px 6px; color: #464653;">
+                        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; font-size: 11px; padding: 2px 6px; color: #464653;">
                             <span>${items.length} Objekt(e) im Papierkorb</span>
                             <span>Gesamtgröße: ${formatSizeTotal(items)}</span>
                         </div>
@@ -117,9 +117,9 @@ window.DOMINIK_MODULES.recycle = (function () {
 
                 if (file.type === 'image') {
                     viewerContentHtml = `
-                        <div class="retro-sunken" style="background: #e8e8e8; padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 440px; max-height: calc(100vh - 250px); overflow: auto;">
-                            <img src="${file.src}" alt="${file.filename}" style="max-height: calc(100vh - 290px); max-width: 100%; width: auto; object-fit: contain; border: 2px solid #000000; box-shadow: 2px 2px 0px #808080; background: #ffffff;">
-                            <div style="margin-top: 8px; font-size: 11px; color: #464653; display: flex; gap: 12px;">
+                        <div class="retro-sunken" style="background: #e8e8e8; padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; max-height: calc(100vh - 250px); max-height: calc(100dvh - 250px); overflow: auto;">
+                            <img src="${file.src}" alt="${file.filename}" style="max-height: calc(100vh - 290px); max-height: calc(100dvh - 290px); max-width: 100%; width: auto; object-fit: contain; border: 2px solid #000000; box-shadow: 2px 2px 0px #808080; background: #ffffff;">
+                            <div style="margin-top: 8px; font-size: 11px; color: #464653; display: flex; flex-wrap: wrap; gap: 8px;">
                                 <span>Datei: <strong>${file.filename}</strong></span>
                                 <span>Größe: <strong>${file.size}</strong></span>
                                 <span>Typ: <strong>PNG-Grafik</strong></span>
@@ -130,7 +130,7 @@ window.DOMINIK_MODULES.recycle = (function () {
                     const textContent = window.DOMINIK_DATA?.recycleText || 'Dateiinhalt wird geladen...';
                     viewerContentHtml = `
                         <div style="display: flex; flex-direction: column; gap: 4px;">
-                            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #464653; padding: 0 4px;">
+                            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; font-size: 11px; color: #464653; padding: 0 4px;">
                                 <span>Editor: NOTEPAD.EXE - ${file.filename}</span>
                                 <span>Codierung: ANSI / UTF-8</span>
                             </div>
@@ -144,13 +144,13 @@ window.DOMINIK_MODULES.recycle = (function () {
                 container.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 8px;">
                         <!-- Viewer Navigationsleiste -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
                             <button id="viewer-back-btn" class="retro-raised-btn" style="padding: 3px 12px; font-size: 11px; font-weight: bold; display: flex; align-items: center; gap: 4px;">
                                 <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
                                 <span>Zurück zum Papierkorb</span>
                             </button>
 
-                            <div style="font-size: 11px; font-weight: bold; color: #000080;">
+                            <div style="font-size: 11px; font-weight: bold; color: #000080; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                 ${selectedFileIndex + 1} von ${items.length}: ${file.filename}
                             </div>
 

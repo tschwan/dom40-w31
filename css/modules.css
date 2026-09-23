@@ -46,6 +46,9 @@
 .calc-stat-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
     padding: 6px 8px;
     background-color: #ffffff;
     font-size: 12px;
@@ -53,12 +56,14 @@
 .calc-stat-val {
     font-weight: 700;
     color: #000080;
+    word-break: break-word;
 }
 .spreadsheet-table {
     width: 100%;
     border-collapse: collapse;
     background-color: #ffffff;
     font-size: 12px;
+    min-width: 0;
 }
 .spreadsheet-table th, .spreadsheet-table td {
     border: 1px solid #c0c0c0;
@@ -74,6 +79,7 @@
 }
 .tab-bar {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
     margin-bottom: 10px;
     border-bottom: 2px solid #808080;
@@ -88,4 +94,36 @@
     background-color: #000080;
     color: #ffffff;
     border-bottom-color: #000080;
+}
+.table-responsive-container {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    min-width: 0;
+}
+@media (max-width: 768px) {
+    .setup-banner {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px;
+    }
+    .setup-wizard-content {
+        gap: 10px;
+        padding: 4px;
+    }
+    .tab-btn {
+        padding: 3px 8px;
+        font-size: 10px;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    .spreadsheet-table {
+        font-size: 11px;
+    }
+    .spreadsheet-table th, .spreadsheet-table td {
+        padding: 3px 6px;
+    }
+    .help-layout-grid {
+        grid-template-columns: 1fr !important;
+    }
 }

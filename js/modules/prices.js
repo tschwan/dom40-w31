@@ -22,13 +22,13 @@ window.DOMINIK_MODULES.prices = {
         container.innerHTML = `
             <div style="display:flex; flex-direction:column; gap:8px;">
                 <!-- Formel-Leiste -->
-                <div class="retro-sunken" style="display:flex; align-items:center; background:#ffffff; padding:4px 8px; font-size:12px;">
-                    <span style="font-weight:bold; color:#000080; margin-right:8px; border-right:1px solid #c0c0c0; padding-right:8px;">fx</span>
-                    <span style="font-family:monospace; color:#3239a3;">=INFLATION_VERGLEICH(DOMINIK_1986..HEUTE; "SCHOCKFAKTOR")</span>
+                <div class="retro-sunken" style="display:flex; align-items:center; background:#ffffff; padding:4px 8px; font-size:12px; min-width:0; overflow:hidden;">
+                    <span style="font-weight:bold; color:#000080; margin-right:8px; border-right:1px solid #c0c0c0; padding-right:8px; flex-shrink:0;">fx</span>
+                    <span style="font-family:monospace; color:#3239a3; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; flex:1;">=INFLATION_VERGLEICH(DOMINIK_1986..HEUTE; "SCHOCKFAKTOR")</span>
                 </div>
 
                 <!-- Tabellen-Raster -->
-                <div class="retro-sunken" style="overflow-x:auto; background:#ffffff;">
+                <div class="retro-sunken table-responsive-container" style="overflow-x:auto; background:#ffffff;">
                     <table class="spreadsheet-table">
                         <thead>
                             <tr>

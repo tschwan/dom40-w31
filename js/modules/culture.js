@@ -50,7 +50,7 @@ window.DOMINIK_MODULES.culture = {
 
                 <!-- WordPad / Write Dokument-Fläche -->
                 <div class="retro-sunken" style="background: #ffffff; padding: 16px; max-height: 400px; overflow-y: auto;">
-                    <div style="border-bottom: 2px solid #000080; padding-bottom: 6px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="border-bottom: 2px solid #000080; padding-bottom: 6px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;">
                         <span style="font-weight: 700; font-size: 13px; color: #000080;">DOKUMENT: POPKULTUR_1986.DOC</span>
                         <span style="font-size: 10px; color: #464653;">Schriftart: Courier 10cpi</span>
                     </div>

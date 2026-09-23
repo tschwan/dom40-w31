@@ -34,8 +34,8 @@ window.DOMINIK_MODULES.setup = {
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px;">
-                    <button class="retro-raised-btn" style="padding: 6px 18px; font-weight: bold;" onclick="window.DOMINIK_STATE.closeProgram()">
+                <div style="display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                    <button class="retro-raised-btn" style="padding: 6px 18px; font-weight: bold; max-width: 100%;" onclick="window.DOMINIK_STATE.closeProgram()">
                         Starten &amp; Desktop freigeben
                     </button>
                 </div>

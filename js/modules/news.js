@@ -30,12 +30,12 @@ window.DOMINIK_MODULES.news = {
 
         container.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div style="font-size: 11px; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
+                <div style="font-size: 11px; background: #e8e8e8; padding: 4px 8px; word-break: break-word;" class="retro-sunken">
                     DPA / REUTERS TELEGRAPHEN-EMPFÄNGER | DATUM: 25.09.1986 | STATUS: LIVE-FEED
                 </div>
 
                 <div class="retro-sunken-dark" style="padding: 14px; max-height: 400px; overflow-y: auto; font-family: 'Courier Prime', Courier, monospace;">
-                    <div style="color: #00ff66; margin-bottom: 12px; font-size: 11px; border-bottom: 1px solid #00ff66; padding-bottom: 4px;">
+                    <div style="color: #00ff66; margin-bottom: 12px; font-size: 11px; border-bottom: 1px solid #00ff66; padding-bottom: 4px; word-break: break-word;">
                         +++ EILMELDUNG-TELETYPE SYSTEM V40.0 +++ EMPFANG BESTÄTIGT +++
                     </div>
                     ${itemsHtml}

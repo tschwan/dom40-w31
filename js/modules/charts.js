@@ -57,7 +57,7 @@ window.DOMINIK_MODULES.charts = {
                     <button class="retro-raised-btn tab-btn" data-filter="20s">2020er</button>
                 </div>
 
-                <div class="retro-sunken" style="max-height: 420px; overflow-y: auto; background: #ffffff;">
+                <div class="retro-sunken table-responsive-container" style="max-height: 420px; overflow-y: auto; overflow-x: auto; background: #ffffff;">
                     <table class="spreadsheet-table">
                         <thead>
                             <tr>

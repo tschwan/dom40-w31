@@ -31,7 +31,7 @@ window.DOMINIK_MODULES.games = {
         container.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <!-- Highscore Banner -->
-                <div class="retro-sunken-dark" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; font-family: monospace;">
+                <div class="retro-sunken-dark" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; padding: 8px 12px; font-family: monospace;">
                     <div style="display: flex; align-items: center; gap: 6px;">
                         <span class="material-symbols-outlined" style="font-size: 18px; color: #ffff00;">sports_esports</span>
                         <span style="color: #ffff00; font-weight: bold;">HALL OF FAME:</span>
@@ -42,7 +42,7 @@ window.DOMINIK_MODULES.games = {
                 </div>
 
                 <!-- Games Grid -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; max-height: 400px; overflow-y: auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr)); gap: 8px; max-height: 400px; overflow-y: auto;">
                     ${gamesHtml}
                 </div>
             </div>

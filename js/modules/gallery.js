@@ -190,7 +190,7 @@ window.DOMINIK_MODULES.gallery = (function () {
                 container.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 8px;">
                         <!-- Toolbar -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
                             <div style="display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: bold;">
                                 <span class="material-symbols-outlined" style="font-size: 16px; color: #000080;">photo_library</span>
                                 <span>C:\\GALLERY\\*.WEBP (13 Motive)</span>
@@ -201,14 +201,14 @@ window.DOMINIK_MODULES.gallery = (function () {
                         </div>
 
                         <!-- Rechteckiges Galerie-Raster (Große Vorschau) -->
-                        <div class="retro-sunken" style="background: #ffffff; padding: 14px; max-height: calc(100vh - 210px); min-height: 380px; overflow-y: auto;">
-                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px;">
+                        <div class="retro-sunken" style="background: #ffffff; padding: 14px; max-height: calc(100vh - 210px); min-height: 200px; overflow-y: auto;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr)); gap: 14px;">
                                 ${cardsHtml}
                             </div>
                         </div>
 
                         <!-- Statuszeile -->
-                        <div style="display: flex; justify-content: space-between; font-size: 11px; padding: 2px 6px; color: #464653;">
+                        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; font-size: 11px; padding: 2px 6px; color: #464653;">
                             <span>13 Bildmotive geladen</span>
                             <span>Format: WebP HD | Dominik 40.0</span>
                         </div>
@@ -232,18 +232,18 @@ window.DOMINIK_MODULES.gallery = (function () {
 
                 const imgStyle = isZoomed
                     ? 'max-height: none; max-width: none; width: auto; height: auto; box-shadow: 0 0 15px rgba(0,0,0,0.9); border: 1px solid #767684;'
-                    : 'max-height: calc(100vh - 280px); min-height: 360px; max-width: 100%; width: auto; object-fit: contain; box-shadow: 0 0 15px rgba(0,0,0,0.9); border: 1px solid #767684;';
+                    : 'max-height: calc(100vh - 240px); max-height: calc(100dvh - 240px); min-height: 180px; max-width: 100%; width: auto; object-fit: contain; box-shadow: 0 0 15px rgba(0,0,0,0.9); border: 1px solid #767684;';
 
                 container.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 8px;">
                         <!-- Navigations-Leiste -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
                             <button id="gallery-back-btn" class="retro-raised-btn" style="padding: 3px 12px; font-size: 11px; font-weight: bold; display: flex; align-items: center; gap: 4px;">
                                 <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
                                 <span>Zurück zur Galerie</span>
                             </button>
 
-                            <div style="font-size: 12px; font-weight: bold; color: #000080; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 480px;">
+                            <div style="font-size: 12px; font-weight: bold; color: #000080; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; min-width: 0;">
                                 ${selectedIndex + 1} von ${items.length}: ${item.title}
                             </div>
 

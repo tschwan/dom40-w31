@@ -25,7 +25,9 @@ window.DOMINIK_MODAL = (function () {
         }
 
         // Set dimensions & title
-        windowEl.style.maxWidth = mod.maxWidth || '800px';
+        const targetMaxWidth = mod.maxWidth || '800px';
+        windowEl.style.setProperty('--window-max-width', targetMaxWidth);
+        windowEl.style.maxWidth = window.innerWidth <= 768 ? '100vw' : targetMaxWidth;
         if (titleLeftEl) {
             titleLeftEl.innerHTML = `
                 <span class="material-symbols-outlined">${mod.icon}</span>
@@ -104,6 +106,15 @@ window.DOMINIK_MODAL = (function () {
         window.DOMINIK_STATE.subscribe((eventType, state) => {
             if (eventType === 'program:open' || eventType === 'program:close') {
                 renderActiveProgram(state.activeProgramId);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            const activeId = window.DOMINIK_STATE?.getActiveProgramId();
+            if (activeId && windowEl) {
+                const mod = (window.DOMINIK_DATA?.modules || []).find(m => m.id === activeId);
+                const targetMaxWidth = mod?.maxWidth || '800px';
+                windowEl.style.maxWidth = window.innerWidth <= 768 ? '100vw' : targetMaxWidth;
             }
         });
     }

@@ -225,11 +225,13 @@ html, body {
 }
 .retro-window {
     width: 100%;
-    max-width: 800px;
+    max-width: var(--window-max-width, 800px);
+    min-width: 0;
     max-height: calc(100vh - var(--taskbar-height) - 32px);
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 0px #000000;
+    overflow: hidden;
 }
 .window-titlebar {
     height: 26px;
@@ -242,6 +244,7 @@ html, body {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
+    min-width: 0;
 }
 .window-title-left {
     display: flex;
@@ -250,9 +253,18 @@ html, body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+.window-title-left span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
 }
 .window-title-left .material-symbols-outlined {
     font-size: 16px;
+    flex-shrink: 0;
 }
 .window-close-btn {
     width: 18px;
@@ -265,6 +277,8 @@ html, body {
     font-size: 12px;
     font-weight: 700;
     line-height: 1;
+    flex-shrink: 0;
+    margin-left: 6px;
 }
 .window-menubar {
     height: 22px;
@@ -284,7 +298,11 @@ html, body {
 }
 .window-body {
     flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 10px;
     background-color: var(--color-window-gray);
 }
@@ -297,6 +315,7 @@ html, body {
     justify-content: space-between;
     padding: 0 6px;
     font-size: 11px;
+    min-width: 0;
 }
 @media (max-width: 768px) {
     #desktop-canvas {
@@ -313,12 +332,46 @@ html, body {
     }
     .modal-overlay {
         padding: 0;
+        overflow: hidden;
     }
     .retro-window {
-        max-width: 100vw;
-        max-height: calc(100vh - var(--taskbar-height));
-        height: calc(100vh - var(--taskbar-height));
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        height: calc(100vh - var(--taskbar-height)) !important;
+        height: calc(100dvh - var(--taskbar-height)) !important;
+        max-height: calc(100vh - var(--taskbar-height)) !important;
+        max-height: calc(100dvh - var(--taskbar-height)) !important;
         border: none;
+        box-shadow: none;
+    }
+    .window-titlebar {
+        height: 32px;
+        padding: 2px 6px;
+    }
+    .window-close-btn {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+        font-size: 14px;
+    }
+    .window-menubar {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        flex-shrink: 0;
+    }
+    .window-statusbar {
+        font-size: 10px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 22px;
+        padding: 2px 4px;
+        flex-shrink: 0;
+    }
+    .taskbar-window-item {
+        max-width: 120px;
+        flex-shrink: 1;
     }
     .start-menu {
         width: calc(100vw - 8px);

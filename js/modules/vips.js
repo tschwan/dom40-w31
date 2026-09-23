@@ -36,12 +36,12 @@ window.DOMINIK_MODULES.vips = {
 
         container.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; background: #e8e8e8; padding: 4px 8px; font-size: 11px;" class="retro-sunken">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; background: #e8e8e8; padding: 4px 8px; font-size: 11px;" class="retro-sunken">
                     <span>DATEI: VIP_1986.DBF | DATENSÄTZE: ${vips.length}</span>
                     <span>INDEX: GEBURTSDATUM = 25. SEPTEMBER</span>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; max-height: 420px; overflow-y: auto; padding: 2px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); gap: 10px; max-height: 420px; overflow-y: auto; padding: 2px;">
                     ${cardsHtml}
                 </div>
             </div>

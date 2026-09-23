@@ -5,7 +5,7 @@ window.DOMINIK_MODULES.certificate = {
     render: function (container) {
         container.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 12px;">
-                <div class="no-print" style="display: flex; justify-content: space-between; align-items: center; background: #e0e0ff; padding: 8px 12px; border: 1px solid #767684;">
+                <div class="no-print" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; background: #e0e0ff; padding: 8px 12px; border: 1px solid #767684;">
                     <span style="font-size: 11px;">9-NADEL-MATRIX-DRUCKER-VORSCHAU: A4-Dokument bereit.</span>
                     <button class="retro-raised-btn" style="padding: 4px 14px; font-weight: bold; display: flex; align-items: center; gap: 4px;" onclick="window.print()">
                         <span class="material-symbols-outlined" style="font-size: 16px;">print</span>
@@ -37,7 +37,7 @@ window.DOMINIK_MODULES.certificate = {
                         die Jugendmusik von heute als „reinen Krach“ zu bezeichnen.
                     </p>
 
-                    <div style="display: flex; justify-content: space-around; align-items: flex-end; margin-top: 24px;">
+                    <div style="display: flex; justify-content: space-around; align-items: flex-end; flex-wrap: wrap; gap: 12px; margin-top: 24px;">
                         <div style="text-align: center;">
                             <div style="border-bottom: 1px solid #000000; width: 140px; margin-bottom: 4px; font-family: cursive; font-size: 14px;">Die Gang</div>
                             <span style="font-size: 10px;">Datum: 25.09.2026</span>

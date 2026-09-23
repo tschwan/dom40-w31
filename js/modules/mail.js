@@ -58,7 +58,7 @@ window.DOMINIK_MODULES.guestbook = {
         container.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <!-- Toolbar -->
-                <div style="display: flex; gap: 6px; background: #e8e8e8; padding: 4px;" class="retro-sunken">
+                <div style="display: flex; flex-wrap: wrap; gap: 6px; background: #e8e8e8; padding: 4px;" class="retro-sunken">
                     <button id="mail-new-btn" class="retro-raised-btn" style="padding: 3px 10px; font-size: 11px; display: flex; align-items: center; gap: 4px;">
                         <span class="material-symbols-outlined" style="font-size: 14px;">edit</span>
                         <span>Eintrag schreiben</span>
@@ -67,7 +67,7 @@ window.DOMINIK_MODULES.guestbook = {
                 </div>
 
                 <!-- Posteingang Liste -->
-                <div class="retro-sunken" style="max-height: 180px; overflow-y: auto; background: #ffffff;">
+                <div class="retro-sunken table-responsive-container" style="max-height: 180px; overflow-y: auto; overflow-x: auto; background: #ffffff;">
                     <table class="spreadsheet-table" style="width: 100%;">
                         <thead>
                             <tr>

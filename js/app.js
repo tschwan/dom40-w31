@@ -30,7 +30,7 @@ function showSystemAlert(message) {
     alertOverlay.style.zIndex = '2000';
 
     alertOverlay.innerHTML = `
-        <div class="retro-window retro-window-frame" style="max-width: 420px; box-shadow: 3px 3px 0px #000000;">
+        <div class="retro-window retro-window-frame" style="max-width: min(420px, calc(100vw - 16px)); box-shadow: 3px 3px 0px #000000;">
             <div class="window-titlebar" style="background: #ba1a1a;">
                 <div class="window-title-left">
                     <span class="material-symbols-outlined" style="color: #ffff00;">warning</span>

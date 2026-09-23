@@ -42,7 +42,7 @@ window.DOMINIK_MODULES.help = {
         container.innerHTML = `
             <div style="display: flex; flex-direction: column; gap: 8px;">
                 <!-- WinHelp Symbolleiste -->
-                <div style="display: flex; gap: 4px; background: #e8e8e8; padding: 4px;" class="retro-sunken">
+                <div style="display: flex; flex-wrap: wrap; gap: 4px; background: #e8e8e8; padding: 4px;" class="retro-sunken">
                     <button class="retro-raised-btn" style="padding: 2px 8px; font-size: 11px;">Inhalt</button>
                     <button class="retro-raised-btn" style="padding: 2px 8px; font-size: 11px;">Suchen</button>
                     <button class="retro-raised-btn" style="padding: 2px 8px; font-size: 11px;">Zurück</button>
@@ -50,7 +50,7 @@ window.DOMINIK_MODULES.help = {
                 </div>
 
                 <!-- 2-Spalten-Layout (Navigation links, Inhalt rechts) -->
-                <div style="display: grid; grid-template-columns: 200px 1fr; gap: 8px;">
+                <div class="help-layout-grid" style="display: grid; grid-template-columns: 200px 1fr; gap: 8px;">
                     <div class="retro-sunken" style="background: #ffffff; padding: 8px; max-height: 380px; overflow-y: auto;">
                         <div style="font-weight: 700; font-size: 11px; margin-bottom: 6px; border-bottom: 1px solid #c0c0c0; padding-bottom: 2px;">
                             THEMEN-INDEX:
