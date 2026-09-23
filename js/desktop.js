@@ -6,12 +6,21 @@ window.DOMINIK_DESKTOP = (function () {
     let startMenuEl = null;
     let startBtnEl = null;
 
+    function getModuleFilename(mod) {
+        if (mod.id === 'recycle') {
+            const count = window.DOMINIK_DATA?.recycleItems?.length ?? 5;
+            return `Recycle Bin (${count})`;
+        }
+        return mod.filename;
+    }
+
     function renderIcons() {
         if (!gridEl) return;
         gridEl.innerHTML = '';
         const modules = window.DOMINIK_DATA?.modules || [];
         modules.forEach(mod => {
             if (!mod.enabled) return;
+            const displayName = getModuleFilename(mod);
             const iconEl = document.createElement('div');
             iconEl.className = 'desktop-icon';
             iconEl.setAttribute('data-id', mod.id);
@@ -19,7 +28,7 @@ window.DOMINIK_DESKTOP = (function () {
                 <div class="icon-box retro-raised">
                     <span class="material-symbols-outlined">${mod.icon}</span>
                 </div>
-                <div class="icon-label">${mod.filename}</div>
+                <div class="icon-label">${displayName}</div>
             `;
             iconEl.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -74,10 +83,11 @@ window.DOMINIK_DESKTOP = (function () {
         if (state.activeProgramId) {
             const mod = (window.DOMINIK_DATA?.modules || []).find(m => m.id === state.activeProgramId);
             if (mod && taskbarWindowItemEl) {
+                const displayName = getModuleFilename(mod);
                 taskbarWindowItemEl.style.display = 'flex';
                 taskbarWindowItemEl.innerHTML = `
                     <span class="material-symbols-outlined" style="font-size:16px;">${mod.icon}</span>
-                    <span>${mod.filename}</span>
+                    <span>${displayName}</span>
                 `;
                 taskbarWindowItemEl.classList.add('is-active');
             }

@@ -85,12 +85,12 @@ window.DOMINIK_DATA.modules = [
     },
     {
         id: 'gallery',
-        filename: 'PAINT_AI.BMP',
-        title: 'AI-Galerie: Dominik Edition',
-        icon: 'palette',
+        filename: 'GALLERY.EXE',
+        title: 'Dominik Foto-Galerie',
+        icon: 'photo_library',
         enabled: true,
-        maxWidth: '780px',
-        menuLabel: 'AI-Fotogalerie'
+        maxWidth: '1060px',
+        menuLabel: 'Foto-Galerie (13 Bilder)'
     },
     {
         id: 'guestbook',
@@ -118,5 +118,14 @@ window.DOMINIK_DATA.modules = [
         enabled: true,
         maxWidth: '860px',
         menuLabel: 'Web 1.0 Trash-Browser'
+    },
+    {
+        id: 'recycle',
+        filename: 'Recycle Bin (5)',
+        title: 'Papierkorb - C:\\RECYCLE\\',
+        icon: 'delete',
+        enabled: true,
+        maxWidth: '960px',
+        menuLabel: 'Recycle Bin (5)'
     }
 ];

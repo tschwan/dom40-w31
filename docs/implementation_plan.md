@@ -44,7 +44,8 @@ dom40-w31/
 |   |   |-- games.data.js       # M06: Games 1986
 |   |   |-- help.data.js        # M07: Überleben 1986 Ratgeber
 |   |   |-- news.data.js        # M08: Schlagzeilen 25.09.1986
-|   |   `-- guestbook.data.js   # M11: Posteingang Glückwünsche
+|   |   |-- guestbook.data.js   # M11: Posteingang Glückwünsche
+|   |   `-- recycle.data.js     # M14: Papierkorb-Inhalt & Prompts
 |   `-- modules/
 |       |-- setup.js            # M01: SETUP_40.EXE
 |       |-- charts.js           # M02: CHARTS.EXE
@@ -55,10 +56,11 @@ dom40-w31/
 |       |-- help.js             # M07: HELP1986.HLP
 |       |-- news.js             # M08: NEWSWIRE.TXT
 |       |-- calc.js             # M09: CALC40.EXE
-|       |-- gallery.js          # M10: PAINT_AI.BMP
+|       |-- gallery.js          # M10: GALLERY.EXE (Dominik Foto-Galerie)
 |       |-- mail.js             # M11: OUTLOOK86.MSG
 |       |-- certificate.js      # M12: CERTIF.PRN
-|       `-- netscape.js         # M13: NETSCAPE.EXE
+|       |-- netscape.js         # M13: NETSCAPE.EXE
+|       `-- recycle.js          # M14: RECYCLE.BIN (Papierkorb)
 |-- docs/
 |   |-- concept_dom40_windows.md
 |   `-- implementation_plan.md
@@ -141,12 +143,16 @@ dom40-w31/
 - [x] **Task 4.2: M11 - `OUTLOOK86.MSG` (Posteingang & Fake-Gästebuch)**
   - Mail-Client-Layout (Nachrichtenliste oben, Vorschaufenster unten).
   - Vordefinierte Glückwünsche aus `js/data/guestbook.data.js`.
-- [x] **Task 4.3: M10 - `PAINT_AI.BMP` (AI-Fotogalerie)**
-  - Bildbetrachter im Paintbrush-Look mit Farbpalette und Werkzeugleiste.
-  - Bild-Raster mit Klick-Vergrößerung und Bildunterschriften.
+- [x] **Task 4.3: M10 - `GALLERY.EXE` (Dominik Foto-Galerie)**
+  - Überarbeitete Galerie mit 13 Motiven im WebP-Format aus dem Ordner `gallery/`.
+  - Rechteckige CSS-Thumbnails, Metadaten (Jahr, Titel, Icon, Farbe) und humorvolle Beschreibungen.
+  - Vollbildansicht mit Vorherig-/Nächstes-Navigation analog zum Recycle-Modul.
 - [x] **Task 4.4: M06 - `ARCADE86.EXE` (Retro-Games 1986)**
   - Showcase bahnbrechender Spiele des Geburtsjahres (*Zelda*, *Metroid*, *Out Run*).
   - Pixel-Art-Screenshots, Plattformen, Entwickler und Trivia aus `js/data/games.data.js`.
+- [x] **Task 4.5: M14 - `Recycle Bin` (Papierkorb Windows 3.1)**
+  - Dateiliste der Elemente aus `recycle/` mit Desktop-Icon inkl. Elementanzahl `(5)`.
+  - Integrierter Bild- und Textviewer für Grafiken (`.png`) und Prompts-Dokumentation (`.txt`).
 
 ---
 
