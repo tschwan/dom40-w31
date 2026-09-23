@@ -1,0 +1,49 @@
+/* Drucklayout für Urkunde CERTIF.PRN */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 15mm;
+    }
+    html, body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        overflow: visible !important;
+        height: auto !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    #desktop-canvas,
+    #taskbar,
+    .start-menu,
+    .window-titlebar,
+    .window-menubar,
+    .window-statusbar,
+    .no-print {
+        display: none !important;
+    }
+    .modal-overlay {
+        position: static !important;
+        background: transparent !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+    .retro-window {
+        max-width: 100% !important;
+        max-height: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+    .window-body {
+        padding: 0 !important;
+        background: transparent !important;
+        overflow: visible !important;
+    }
+    .certificate-printable {
+        display: block !important;
+        width: 100% !important;
+        border: 4px double #000000 !important;
+        padding: 30px !important;
+        page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominik OS 1986 - 40th Jubilee Edition</title>
+    <!-- Google Fonts & Material Symbols (Hybrid CDN with system fallbacks) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bevels.css">
+    <link rel="stylesheet" href="css/retro-theme.css">
+    <link rel="stylesheet" href="css/modules.css">
+    <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+    <!-- Desktop Canvas -->
+    <main id="desktop-canvas">
+        <div id="desktop-grid" class="desktop-grid"></div>
+        <div class="watermark">
+            <h1>DOMINIK OS</h1>
+            <p>1986 - 2026 | 40 JAHRE EDITION</p>
+        </div>
+    </main>
+
+    <!-- Start Menu -->
+    <div id="start-menu" class="start-menu retro-window-frame">
+        <div class="start-menu-banner">DOMINIK OS 40.0</div>
+        <ul class="start-menu-list"></ul>
+    </div>
+
+    <!-- Single Active Window Modal -->
+    <div id="window-modal-overlay" class="modal-overlay">
+        <div id="active-retro-window" class="retro-window retro-window-frame">
+            <div class="window-titlebar">
+                <div id="window-title-left" class="window-title-left"></div>
+                <button id="window-close-btn" class="retro-raised-btn window-close-btn" title="Schließen (Esc)">X</button>
+            </div>
+            <div class="window-menubar">
+                <div class="window-menu-item"><span>D</span>atei</div>
+                <div class="window-menu-item"><span>B</span>earbeiten</div>
+                <div class="window-menu-item"><span>A</span>nsicht</div>
+                <div class="window-menu-item"><span>H</span>ilfe</div>
+            </div>
+            <div id="window-body-container" class="window-body"></div>
+            <div class="window-statusbar">
+                <span id="window-status-left">Bereit</span>
+                <span id="window-status-right">DOMINIK-OS 40.0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Taskbar -->
+    <footer id="taskbar" class="retro-raised">
+        <div class="taskbar-left">
+            <button id="start-btn" class="retro-raised-btn taskbar-start-btn">
+                <span class="material-symbols-outlined">grid_view</span>
+                <span>Start</span>
+            </button>
+        </div>
+        <div class="taskbar-center">
+            <div id="taskbar-window-item" class="retro-sunken-trough taskbar-window-item" style="display: none;"></div>
+        </div>
+        <div class="taskbar-right">
+            <div class="retro-sunken-dark taskbar-tray">MEM OK: 640K</div>
+            <div id="taskbar-clock" class="retro-sunken-trough taskbar-tray taskbar-clock">00:00:00</div>
+        </div>
+    </footer>
+
+    <!-- Scripts: Data & Configuration -->
+    <script src="js/data/modules.config.js"></script>
+    <script src="js/data/charts.data.js"></script>
+    <script src="js/data/culture.data.js"></script>
+    <script src="js/data/vips.data.js"></script>
+    <script src="js/data/prices.data.js"></script>
+    <script src="js/data/games.data.js"></script>
+    <script src="js/data/help.data.js"></script>
+    <script src="js/data/news.data.js"></script>
+    <script src="js/data/guestbook.data.js"></script>
+
+    <!-- Scripts: Core State & Controllers -->
+    <script src="js/state.js"></script>
+    <script src="js/desktop.js"></script>
+    <script src="js/modal.js"></script>
+
+    <!-- Scripts: Modules -->
+    <script src="js/modules/setup.js"></script>
+    <script src="js/modules/calc.js"></script>
+    <script src="js/modules/certificate.js"></script>
+    <script src="js/modules/prices.js"></script>
+    <script src="js/modules/charts.js"></script>
+    <script src="js/modules/vips.js"></script>
+    <script src="js/modules/culture.js"></script>
+    <script src="js/modules/news.js"></script>
+    <script src="js/modules/help.js"></script>
+    <script src="js/modules/games.js"></script>
+    <script src="js/modules/gallery.js"></script>
+    <script src="js/modules/mail.js"></script>
+    <script src="js/modules/netscape.js"></script>
+
+    <!-- Main Entry Point -->
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Windows 3.1 3D Bevel Styles */
+.retro-raised {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #808080, 1px 1px 0px #000000;
+    background-color: #c0c0c0;
+}
+.retro-raised-btn {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-shadow: 1px 1px 0px #000000;
+    background-color: #c0c0c0;
+    color: #000000;
+    cursor: pointer;
+    user-select: none;
+}
+.retro-raised-btn:hover {
+    filter: brightness(1.03);
+}
+.retro-raised-btn:active, .retro-raised-btn.is-active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    box-shadow: inset 1px 1px 0px #000000;
+    padding-top: calc(var(--btn-pt, 4px) + 1px);
+    padding-left: calc(var(--btn-pl, 8px) + 1px);
+}
+.retro-sunken {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    box-shadow: inset 1px 1px 0px #000000;
+    background-color: #ffffff;
+}
+.retro-sunken-dark {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    box-shadow: inset 1px 1px 0px #000000;
+    background-color: #000000;
+    color: #00ff66;
+}
+.retro-sunken-trough {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: #c0c0c0;
+}
+.retro-window-frame {
+    border: 1px solid #000000;
+    box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #808080, inset 2px 2px 0px #c0c0c0, inset -2px -2px 0px #c0c0c0;
+    background-color: #c0c0c0;
+}
