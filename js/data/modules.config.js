@@ -75,6 +75,15 @@ window.DOMINIK_DATA.modules = [
         menuLabel: 'Retro-Games 1986'
     },
     {
+        id: 'minesweep',
+        filename: 'MINESWEEP.EXE',
+        title: 'Minesweeper 40.0 - Das Lebens-Minenfeld',
+        icon: 'flag',
+        enabled: true,
+        maxWidth: '460px',
+        menuLabel: 'Minesweeper 40.0'
+    },
+    {
         id: 'help',
         filename: 'HELP1986.HLP',
         title: 'Alltag & Technik 1986: Ein Handbuch',

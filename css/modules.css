@@ -397,5 +397,124 @@
         font-size: 11px;
     }
 }
+/* Modul: MINESWEEP.EXE (Minesweeper 40.0) */
+.ms-window-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 6px;
+    background-color: #c0c0c0;
+    user-select: none;
+}
+.ms-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 4px 6px;
+}
+.ms-lvl-btn {
+    padding: 2px 6px;
+    font-size: 10px;
+}
+.ms-lvl-btn.active {
+    background-color: #000080;
+    color: #ffffff;
+}
+.ms-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: #c0c0c0;
+}
+.ms-digital-display {
+    background-color: #000000;
+    color: #ff0000;
+    font-family: 'Courier Prime', Courier, monospace;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 1px 6px;
+    min-width: 48px;
+    text-align: right;
+    line-height: 1.1;
+}
+.ms-face-button {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.ms-grid-frame {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    border-top: 3px solid #808080;
+    border-left: 3px solid #808080;
+    border-right: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    background-color: #808080;
+    overflow-x: auto;
+}
+.ms-grid {
+    display: grid;
+    background-color: #808080;
+    gap: 1px;
+}
+.ms-cell {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    box-sizing: border-box;
+    font-family: 'Courier Prime', Arial, sans-serif;
+}
+.ms-hidden {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    background-color: #c0c0c0;
+    cursor: pointer;
+}
+.ms-flagged {
+    font-size: 11px;
+    cursor: pointer;
+}
+.ms-revealed {
+    border: 1px solid #7b7b7b;
+    background-color: #c0c0c0;
+}
+.ms-exploded {
+    background-color: #ff3333 !important;
+}
+.ms-num-1 { color: #0000ff; }
+.ms-num-2 { color: #008000; }
+.ms-num-3 { color: #ff0000; }
+.ms-num-4 { color: #000080; }
+.ms-num-5 { color: #800000; }
+.ms-num-6 { color: #008080; }
+.ms-num-7 { color: #000000; }
+.ms-num-8 { color: #808080; }
+@media (max-width: 480px) {
+    .ms-cell {
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+    }
+}
+
 
 
