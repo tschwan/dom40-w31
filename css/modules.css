@@ -525,6 +525,36 @@
 .sh-nav-item.selected {
     background-color: #c8d8f8;
 }
+/* Modul: CONTROL.EXE (Systemsteuerung) */
+.ctrl-window-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.ctrl-applet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+    background-color: #e8e8e8;
+}
+.ctrl-applet-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.ctrl-applet-btn.active {
+    background-color: #000080;
+    color: #ffffff;
+}
+.ctrl-applet-btn.active .material-symbols-outlined {
+    color: #ffff00;
+}
+
+
 
 
 

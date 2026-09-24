@@ -36,6 +36,16 @@ window.DOMINIK_DATA.systemhelp = {
             features: ['Volltext-Filter aller Module', 'Direktstart von Programmen', 'GitHub-Repository-Integration']
         },
         {
+            id: 'control',
+            filename: 'CONTROL.EXE',
+            title: 'Systemsteuerung (Audio & Bildschirmschoner)',
+            category: 'System',
+            icon: 'settings',
+            summary: 'Systemsteuerung mit After-Dark-Bildschirmschoner und personalisiertem Audiomixer.',
+            details: 'Enthält den After-Dark-Bildschirmschoner mit fliegenden Dominiks (images/dom.webp) inklusive CRT-Vorschau und Vollbild-Test sowie den Lautstärkeregler für "Hä? Was hast du gesagt?" mit lautstärke-gekoppeltem Testton.',
+            features: ['CRT-Monitor-Schonervorschau & Vollbild-Test', 'Fliegende Dominiks (images/dom.webp)', 'Lautstärkeregler für "Hä? Was hast du gesagt?"', 'Lautstärke-gekoppelter Windows-3.1-Testton (Tada!)']
+        },
+        {
             id: 'charts',
             filename: 'CHARTS.EXE',
             title: 'Media Control Hitparade 1986-2026',

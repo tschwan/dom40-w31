@@ -21,6 +21,15 @@ window.DOMINIK_DATA.modules = [
         menuLabel: 'System-Hilfe (HELP.HLP)'
     },
     {
+        id: 'control',
+        filename: 'CONTROL.EXE',
+        title: 'Systemsteuerung (Audio & Bildschirmschoner)',
+        icon: 'settings',
+        enabled: true,
+        maxWidth: '780px',
+        menuLabel: 'Systemsteuerung (CONTROL.EXE)'
+    },
+    {
         id: 'charts',
         filename: 'CHARTS.EXE',
         title: 'Media Control Hitparade 1986-2025',
