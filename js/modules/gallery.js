@@ -39,10 +39,10 @@ window.DOMINIK_MODULES.gallery = (function () {
         {
             filename: 'gta_iv.webp',
             src: 'gallery/gta_iv.webp',
-            year: '2008',
+            year: '2026',
             title: 'GTA VI',
             category: 'Rockstar Ladescreen',
-            desc: 'Fahndungslevel: 5 Sterne für 40 Jahre legendäre Partys! Mette, Thomas und Dominik im unverwechselbaren Cel-Shading-Artwork vor den Docks von Liberty City. Niko Bellic wollte eigentlich Bowling spielen, aber gegen Dominiks Geburtstagsparty hatte selbst er keine Einwände.',
+            desc: 'Fahndungslevel: 5 Sterne für 40 Jahre legendäre Partys! Mette, Thomas und Dominik im unverwechselbaren Cel-Shading-Artwork zurück in Vice City im fiktiven Bundesstaar Leonida. Niko Bellic wollte eigentlich Bowling spielen, aber gegen Dominiks Geburtstagsparty hatte selbst er keine Einwände.',
             icon: 'sports_esports',
             color: '#8b0000'
         },
@@ -112,7 +112,7 @@ window.DOMINIK_MODULES.gallery = (function () {
             year: '1986',
             title: 'The Gang - Est. 1986 Bronx Edition',
             category: 'Foto-Meilenstein',
-            desc: '2 Uhr nachts in der Bronx: Mette und Thomas mit dicken Goldketten am brennenden Ölfass. Am Boden liegt die frische Tageszeitung: "BREAKING NEWS: DOMINIK TURNS 40!" Ein unvergessliches Gruppenfoto der Legenden.',
+            desc: '2 Uhr nachts in der Bronx: Cold Blood Mäddie, Silent Tommy und The Wrecking Ball Dom mit dicken Goldketten am brennenden Ölfass. Am Boden liegt die frische Tageszeitung: "BREAKING NEWS: DOMINIK TURNS 40!" Ein unvergessliches Gruppenfoto der Legenden.',
             icon: 'groups',
             color: '#2f3542'
         },
@@ -132,7 +132,7 @@ window.DOMINIK_MODULES.gallery = (function () {
             year: '1986',
             title: 'GTA Vice City - Ocean Beach Vibe',
             category: 'Rockstar Ladescreen',
-            desc: 'Türkiser Himmel, Palmen, Sportwagen und pinke Neonlichter am Ocean Drive: Tommy Thomas und Mette im 80s-Miami-Look bei Dominiks spektakulärem 40. Geburtstags-Coup. "Video Killed the Radio Star" läuft im Autoradio auf Endlosschleife!',
+            desc: 'Türkiser Himmel, Palmen und pinke Neonlichter am Ocean Drive: Tommy und Mette im 80s-Miami-Look. "Video Killed the Radio Star" läuft im Autoradio auf Endlosschleife!. Kleine Randnotiz, die Story spielt im Jahr 1986.',
             icon: 'sports_esports',
             color: '#e056fd'
         }

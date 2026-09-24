@@ -86,7 +86,7 @@ window.DOMINIK_DATA.modules = [
     {
         id: 'gallery',
         filename: 'GALLERY.EXE',
-        title: 'Dominik Foto-Galerie',
+        title: 'Gang Foto-Galerie',
         icon: 'photo_library',
         enabled: true,
         maxWidth: '1060px',
