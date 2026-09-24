@@ -84,6 +84,15 @@ window.DOMINIK_DATA.modules = [
         menuLabel: 'Tages-Ticker 25.09.1986'
     },
     {
+        id: 'teletext',
+        filename: 'TELETEXT.EXE',
+        title: 'Videotext Tafel 1986',
+        icon: 'live_tv',
+        enabled: true,
+        maxWidth: '840px',
+        menuLabel: 'Teletext / Videotext 1986'
+    },
+    {
         id: 'gallery',
         filename: 'GALLERY.EXE',
         title: 'Gang Foto-Galerie',
