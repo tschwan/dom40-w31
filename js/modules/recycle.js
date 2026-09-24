@@ -114,7 +114,7 @@ window.DOMINIK_MODULES.recycle = (function () {
                 });
 
                 container.querySelector('#recycle-restore-btn')?.addEventListener('click', () => {
-                    alert('HINWEIS: Alle 5 Dateien sind bereits vollständig im Speicher geladen und können per Klick direkt betrachtet werden.');
+                    alert(`HINWEIS: Alle ${items.length} Dateien sind bereits vollständig im Speicher geladen und können per Klick direkt betrachtet werden.`);
                 });
             }
 

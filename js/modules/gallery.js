@@ -1,4 +1,4 @@
-// Modul: GALLERY.EXE (Dominik Foto-Galerie mit 13 WebP-Motiven)
+// Modul: GALLERY.EXE (Dominik Foto-Galerie mit 25 WebP-Motiven)
 window.DOMINIK_MODULES = window.DOMINIK_MODULES || {};
 
 window.DOMINIK_MODULES.gallery = (function () {
@@ -12,9 +12,29 @@ window.DOMINIK_MODULES.gallery = (function () {
             year: '1985',
             title: 'Zurück in Dominiks Zukunft',
             category: 'Kultfilm-Parodie',
-            desc: 'Mette & Thomas heizen mit dem DeLorean und 1,21 Gigawatt durch die Zeitlinie, um Dominik 1986 rechtzeitig abzuholen. Echte 80er-Trivia: Michael J. Fox ersetzte damals Eric Stoltz nach fünf Wochen Drehzeit.',
+            desc: 'Mit dem DeLorean und 1,21 Gigawatt durch die Zeitlinie, um Dominik 1986 rechtzeitig abzuholen. Echte 80er-Trivia: Michael J. Fox ersetzte damals Eric Stoltz nach fünf Wochen Drehzeit.',
             icon: 'electric_bolt',
             color: '#000080'
+        },
+        {
+            filename: 'cheesy.webp',
+            src: 'gallery/cheesy.webp',
+            year: '1986',
+            title: 'Pastell-Poeten & Preppy-Look',
+            category: '80s Preppy-Style',
+            desc: 'Poloshirts mit aufgestelltem Kragen und Feinstrickpullover über die Schultern geknotet: Mette, Thomas und Dominik verkörpern den perfekten 80er-Yachtclub-Chic.',
+            icon: 'dry_cleaning',
+            color: '#ff9ff3'
+        },
+        {
+            filename: 'christmas.webp',
+            src: 'gallery/christmas.webp',
+            year: '2026',
+            title: 'Weihnachtsmarkt - Glühwein & Good Times',
+            category: 'Winter & Festtage',
+            desc: 'Dampfender Glühwein zwischen glitzernden Festbuden. Ein herzerwärmender Toast auf 40 Jahre!',
+            icon: 'celebration',
+            color: '#c0392b'
         },
         {
             filename: 'crocodile_dundee.webp',
@@ -37,12 +57,22 @@ window.DOMINIK_MODULES.gallery = (function () {
             color: '#4a154b'
         },
         {
+            filename: 'desert.webp',
+            src: 'gallery/desert.webp',
+            year: '2026',
+            title: 'Dune: Die Wüsten-Saga',
+            category: 'Sci-Fi Epos',
+            desc: 'Mette im wehenden Terrakotta-Gewand, Thomas im Trenchcoat und Dominik in dunkler Robe: Wer das Gewürz kontrolliert, beherrscht das Universum – und den 40. Geburtstag!',
+            icon: 'landslide',
+            color: '#e67e22'
+        },
+        {
             filename: 'gta_iv.webp',
             src: 'gallery/gta_iv.webp',
             year: '2026',
             title: 'GTA VI',
             category: 'Rockstar Ladescreen',
-            desc: 'Fahndungslevel: 5 Sterne für 40 Jahre legendäre Partys! Mette, Thomas und Dominik im unverwechselbaren Cel-Shading-Artwork zurück in Vice City im fiktiven Bundesstaar Leonida. Niko Bellic wollte eigentlich Bowling spielen, aber gegen Dominiks Geburtstagsparty hatte selbst er keine Einwände.',
+            desc: 'Fahndungslevel: 5 Sterne! Mette, Thomas und Dominik im unverwechselbaren Cel-Shading-Artwork zurück in Vice City im fiktiven Bundesstaar Leonida.',
             icon: 'sports_esports',
             color: '#8b0000'
         },
@@ -52,9 +82,29 @@ window.DOMINIK_MODULES.gallery = (function () {
             year: '2013',
             title: 'GTA Online - The Virtual Gang',
             category: 'Rockstar Ladescreen',
-            desc: '"Dominik\'s Birthday Bash - Level 40 Unlocked!" Thomas mit High-End-Laptop und Mette mit High-Tech-Drohne vor der glühenden Skyline von Los Santos. Kein Heist war jemals lukrativer als 40 Jahre voller bester Erinnerungen.',
+            desc: '"Dominik\'s Birthday Bash - Level 40 Unlocked!" Kein Heist war jemals lukrativer als 40 Jahre voller bester Erinnerungen.',
             icon: 'sports_esports',
             color: '#006699'
+        },
+        {
+            filename: 'high_fashion.webp',
+            src: 'gallery/high_fashion.webp',
+            year: '2026',
+            title: 'Vogue Editorial: Haute Couture 40',
+            category: 'High Fashion',
+            desc: 'Dramatisches Studiolicht und kühler Runway-Blick: Dominik im schwarzen Designermantel, Thomas im anthrazitfarbenen Anzug und Mette in skulpturaler Seidentoga.',
+            icon: 'diamond',
+            color: '#2c3e50'
+        },
+        {
+            filename: 'hip_hop.webp',
+            src: 'gallery/hip_hop.webp',
+            year: '1986',
+            title: 'The Gang - Oldschool Hip Hop Band',
+            category: 'Rap & Streetstyle',
+            desc: 'Die oldschool Hip Hopper vor nächtlicher Skyline:. Fette Goldketten, dicke Beats und Reime direkt aus der Bronx!',
+            icon: 'headphones',
+            color: '#9b59b6'
         },
         {
             filename: 'karate_kid.webp',
@@ -72,9 +122,49 @@ window.DOMINIK_MODULES.gallery = (function () {
             year: '1986',
             title: 'Miami Vice - Biscayne Bay Speedboat',
             category: 'TV-Kultserie',
-            desc: 'Pastell-Sakkos, Jan-Hammer-Synthesizer und Gischt in Biscayne Bay: Thomas am Steuer des Offshore-Speedboats und Mette mit Aviator-Brille auf heißer Geburtstags-Verfolgungsjagd. 1986 prägte diese Serie weltweit Männermode und weiße Testarossas.',
+            desc: 'Pastell-Sakkos, Jan-Hammer-Synthesizer und Gischt in Biscayne Bay. 1986 prägte diese Serie weltweit Männermode und weiße Testarossas.',
             icon: 'directions_boat',
             color: '#008080'
+        },
+        {
+            filename: 'motorcycle.webp',
+            src: 'gallery/motorcycle.webp',
+            year: '1986',
+            title: 'The Gang - Chapter Cologne',
+            category: 'Biker-Kult',
+            desc: 'The Gang - Chapter Cologne auf ihren dicken Harleys unterwegs im Wüstenstaub: Mit brüllenden Motoren, Lederkutten und Sonnenuntergang im Rückspiegel cruisen Dominik, Thomas und Mette dem 40. Horizont entgegen.',
+            icon: 'two_wheeler',
+            color: '#d35400'
+        },
+        {
+            filename: 'mugshot.webp',
+            src: 'gallery/mugshot.webp',
+            year: '2026',
+            title: 'Polizeifoto: Die Gang hinter Gittern',
+            category: 'Fahndungsakte',
+            desc: 'Aufnahme der Gang nach ihrer Festnahme. Jetzt hat es sie doch erwischt! Tatvorwurf: 40 Jahre unverschämt gute Laune.',
+            icon: 'local_police',
+            color: '#34495e'
+        },
+        {
+            filename: 'poker_night.webp',
+            src: 'gallery/poker_night.webp',
+            year: '2026',
+            title: 'Las Vegas Poker Nacht',
+            category: 'Casino & High Roller',
+            desc: 'Im edlen Zwirn bei einer Las Vegas Poker Nacht. Das ungeschriebene Casino-Gesetz: "The Gang - House Always Loses"!',
+            icon: 'casino',
+            color: '#b8860b'
+        },
+        {
+            filename: 'punks.webp',
+            src: 'gallery/punks.webp',
+            year: '1986',
+            title: 'Punk\'s Not Dead - Est. 1986',
+            category: 'Punkrock & Anarchie',
+            desc: 'Dominik mit Irokesenschnitt und Nietenhalsband, Thomas in Lederkutte und Mette mit toupierten Haaren und Schottenrock: Drei Rebellen gegen das bürgerliche Altern!',
+            icon: 'bolt',
+            color: '#e74c3c'
         },
         {
             filename: 'schwarzwaldklinik.webp',
@@ -87,6 +177,16 @@ window.DOMINIK_MODULES.gallery = (function () {
             color: '#800020'
         },
         {
+            filename: 'spießer.webp',
+            src: 'gallery/spießer.webp',
+            year: '1986',
+            title: 'Die Biedermänner: Spießer-Idyll',
+            category: 'Satire & Vintage',
+            desc: 'Beige Strickjacken, Schluppenbluse, Krawatte und Hornbrillen: Dominik, Thomas und Mette als Inbegriff des deutschen Spießertums. Samstags Kehrwoche, sonntags Braten!',
+            icon: 'chair',
+            color: '#795548'
+        },
+        {
             filename: 'stand_by_me.webp',
             src: 'gallery/stand_by_me.webp',
             year: '1986',
@@ -95,6 +195,16 @@ window.DOMINIK_MODULES.gallery = (function () {
             desc: '"Freunde fürs Leben." Dominik, Mette und Thomas auf den Bahngleisen nach Castle Rock. Die schönste Hommage an echte Jugend und unerschütterliche Freundschaft aus Dominiks Geburtsjahr 1986.',
             icon: 'diversity_3',
             color: '#805500'
+        },
+        {
+            filename: 'starwars.webp',
+            src: 'gallery/starwars.webp',
+            year: '1986',
+            title: 'Star Wars: Die Rückkehr der Geburtstags-Ritter',
+            category: 'Sci-Fi Kult',
+            desc: 'Im Rasenden Falken: Jedi Dominik mit gezücktem Lichtschwert, Thomas als Han Solo mit Blaster und Mette als Leia an der Schiffskonsole. Möge die 40 mit dir sein!',
+            icon: 'rocket_launch',
+            color: '#2980b9'
         },
         {
             filename: 'the_fall_guy.webp',
@@ -135,6 +245,16 @@ window.DOMINIK_MODULES.gallery = (function () {
             desc: 'Türkiser Himmel, Palmen und pinke Neonlichter am Ocean Drive: Tommy und Mette im 80s-Miami-Look. "Video Killed the Radio Star" läuft im Autoradio auf Endlosschleife!. Kleine Randnotiz, die Story spielt im Jahr 1986.',
             icon: 'sports_esports',
             color: '#e056fd'
+        },
+        {
+            filename: 'wrestling.webp',
+            src: 'gallery/wrestling.webp',
+            year: '1986',
+            title: 'The Gang - Undisputed Champions',
+            category: 'WWF Wrestling',
+            desc: 'Ein unschlagbares Wrestling Tag-Team: Dominik stemmt stolz den massiven Weltmeister-Gürtel vor funkelndem Hallenfeuerwerk. 40 Jahre und im Ring des Lebens absolut unbesiegt!',
+            icon: 'sports_mma',
+            color: '#f39c12'
         }
     ];
 
@@ -193,7 +313,7 @@ window.DOMINIK_MODULES.gallery = (function () {
                         <div class="retro-sunken" style="flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; gap: 4px; background: #e8e8e8; padding: 4px 8px; min-width: 0;">
                             <div style="display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: bold; min-width: 0;">
                                 <span class="material-symbols-outlined" style="font-size: 16px; color: #000080; flex-shrink: 0;">photo_library</span>
-                                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">C:\\GALLERY\\*.WEBP (13 Motive)</span>
+                                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">C:\\GALLERY\\*.WEBP (${items.length} Motive)</span>
                             </div>
                             <div style="font-size: 11px; color: #464653; flex-shrink: 0;">
                                 Klick auf ein Bild öffnet Großansicht
@@ -209,7 +329,7 @@ window.DOMINIK_MODULES.gallery = (function () {
 
                         <!-- Statuszeile -->
                         <div style="flex-shrink: 0; display: flex; justify-content: space-between; gap: 4px; font-size: 11px; padding: 2px 6px; color: #464653;">
-                            <span>13 Bildmotive geladen</span>
+                            <span>${items.length} Bildmotive geladen</span>
                             <span>Format: WebP HD | Dominik 40.0</span>
                         </div>
                     </div>

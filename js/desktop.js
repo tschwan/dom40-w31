@@ -8,7 +8,7 @@ window.DOMINIK_DESKTOP = (function () {
 
     function getModuleFilename(mod) {
         if (mod.id === 'recycle') {
-            const count = window.DOMINIK_DATA?.recycleItems?.length ?? 5;
+            const count = window.DOMINIK_DATA?.recycleItems?.length ?? 14;
             return `Recycle Bin (${count})`;
         }
         return mod.filename;

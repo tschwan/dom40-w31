@@ -135,7 +135,7 @@ window.DOMINIK_DATA.modules = [
         icon: 'photo_library',
         enabled: true,
         maxWidth: '1060px',
-        menuLabel: 'Foto-Galerie (13 Bilder)'
+        menuLabel: 'Foto-Galerie (25 Bilder)'
     },
     {
         id: 'guestbook',
@@ -166,11 +166,11 @@ window.DOMINIK_DATA.modules = [
     },
     {
         id: 'recycle',
-        filename: 'Recycle Bin (5)',
+        filename: 'Recycle Bin (14)',
         title: 'Papierkorb - C:\\RECYCLE\\',
         icon: 'delete',
         enabled: true,
         maxWidth: '960px',
-        menuLabel: 'Recycle Bin (5)'
+        menuLabel: 'Recycle Bin (14)'
     }
 ];
