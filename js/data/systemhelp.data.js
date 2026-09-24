@@ -46,6 +46,16 @@ window.DOMINIK_DATA.systemhelp = {
             features: ['CRT-Monitor-Schonervorschau & Vollbild-Test', 'Fliegende Dominiks (images/dom.webp)', 'Lautstärkeregler für "Hä? Was hast du gesagt?"', 'Lautstärke-gekoppelter Windows-3.1-Testton (Tada!)']
         },
         {
+            id: 'soundrec',
+            filename: 'SOUNDREC.EXE',
+            title: 'Audiorekorder - Dominik Soundboard',
+            category: 'Kultur & Musik',
+            icon: 'graphic_eq',
+            summary: 'Klassischer Windows 3.1 Audiorekorder mit Oszilloskop-Welle und 80s-Soundboard.',
+            details: 'Spielt ikonische Sounds wie 56k-Modem-Einwahl, Kassetten-Spulen, PC-Speaker-Beeps sowie Kult-Zitate aus Top Gun ("Need for Speed") und Crocodile Dundee ("Das ist ein Messer!") mit lebendiger grüner Oszilloskop-Animation ab.',
+            features: ['Echte grüne Oszilloskop-Wellenform (AnalyserNode)', 'Web Audio API Synthesizer (Modem, Kassetten, Speaker)', 'Kult-Zitate aus dem Jahrgang 1986', 'Tempo-Steuerung (0.75x, 1.0x, 1.5x)']
+        },
+        {
             id: 'charts',
             filename: 'CHARTS.EXE',
             title: 'Media Control Hitparade 1986-2026',

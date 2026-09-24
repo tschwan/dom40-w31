@@ -553,6 +553,81 @@
 .ctrl-applet-btn.active .material-symbols-outlined {
     color: #ffff00;
 }
+/* Modul: SOUNDREC.EXE (Audiorekorder / Soundboard) */
+.soundrec-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.soundrec-screen-frame {
+    background-color: #c0c0c0;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.soundrec-meters {
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    align-items: center;
+    gap: 8px;
+}
+.soundrec-oscilloscope {
+    height: 52px;
+    border: 2px solid #808080;
+    background-color: #001800;
+    overflow: hidden;
+}
+.soundrec-trackbar {
+    height: 12px;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+.soundrec-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #000080;
+    transition: width 0.1s linear;
+}
+.soundrec-controls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+.snd-ctrl-btn {
+    padding: 4px 14px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.soundrec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 6px;
+}
+.snd-preset-btn {
+    padding: 6px 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.snd-preset-btn.selected {
+    background-color: #c8d8f8;
+    border-color: #000080;
+}
+.snd-speed-btn.active {
+    background-color: #000080;
+    color: #ffffff;
+}
+@media (max-width: 600px) {
+    .soundrec-meters {
+        grid-template-columns: 60px 1fr 60px;
+        gap: 4px;
+    }
+}
+
 
 
 

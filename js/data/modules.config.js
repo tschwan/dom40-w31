@@ -30,6 +30,15 @@ window.DOMINIK_DATA.modules = [
         menuLabel: 'Systemsteuerung (CONTROL.EXE)'
     },
     {
+        id: 'soundrec',
+        filename: 'SOUNDREC.EXE',
+        title: 'Audiorekorder - Dominik Soundboard',
+        icon: 'graphic_eq',
+        enabled: true,
+        maxWidth: '680px',
+        menuLabel: 'Audiorekorder / Soundboard'
+    },
+    {
         id: 'charts',
         filename: 'CHARTS.EXE',
         title: 'Media Control Hitparade 1986-2025',
