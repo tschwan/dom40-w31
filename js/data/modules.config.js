@@ -12,6 +12,15 @@ window.DOMINIK_DATA.modules = [
         menuLabel: 'Dominik OS Setup Wizard'
     },
     {
+        id: 'systemhelp',
+        filename: 'HELP.HLP',
+        title: 'Dominik OS 40.0 - Windows Hilfe',
+        icon: 'help_center',
+        enabled: true,
+        maxWidth: '840px',
+        menuLabel: 'System-Hilfe (HELP.HLP)'
+    },
+    {
         id: 'charts',
         filename: 'CHARTS.EXE',
         title: 'Media Control Hitparade 1986-2025',

@@ -515,6 +515,17 @@
         font-size: 11px;
     }
 }
+/* Modul: HELP.HLP (Systemhilfe) */
+.sh-nav-item {
+    transition: background-color 0.1s ease;
+}
+.sh-nav-item:hover {
+    background-color: #e0e0ff;
+}
+.sh-nav-item.selected {
+    background-color: #c8d8f8;
+}
+
 
 
 

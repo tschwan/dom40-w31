@@ -87,6 +87,11 @@ window.DOMINIK_MODAL = (function () {
             window.DOMINIK_STATE.closeProgram();
         });
 
+        // Klick auf "Hilfe" in der Menüleiste öffnet HELP.HLP
+        document.getElementById('window-menu-help')?.addEventListener('click', () => {
+            window.DOMINIK_STATE.openProgram('systemhelp');
+        });
+
         // Click outside window to close
         overlayEl?.addEventListener('click', (e) => {
             if (e.target === overlayEl) {
