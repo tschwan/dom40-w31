@@ -335,8 +335,8 @@ html, body {
         overflow: hidden;
     }
     .retro-window {
-        width: 100vw !important;
-        max-width: 100vw !important;
+        width: 100% !important;
+        max-width: 100% !important;
         min-width: 0 !important;
         height: calc(100vh - var(--taskbar-height)) !important;
         height: calc(100dvh - var(--taskbar-height)) !important;

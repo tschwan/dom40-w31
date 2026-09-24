@@ -188,27 +188,27 @@ window.DOMINIK_MODULES.gallery = (function () {
                 });
 
                 container.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="display: flex; flex-direction: column; height: 100%; min-height: 0; min-width: 0; gap: 6px;">
                         <!-- Toolbar -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
-                            <div style="display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: bold;">
-                                <span class="material-symbols-outlined" style="font-size: 16px; color: #000080;">photo_library</span>
-                                <span>C:\\GALLERY\\*.WEBP (13 Motive)</span>
+                        <div class="retro-sunken" style="flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; gap: 4px; background: #e8e8e8; padding: 4px 8px; min-width: 0;">
+                            <div style="display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: bold; min-width: 0;">
+                                <span class="material-symbols-outlined" style="font-size: 16px; color: #000080; flex-shrink: 0;">photo_library</span>
+                                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">C:\\GALLERY\\*.WEBP (13 Motive)</span>
                             </div>
-                            <div style="font-size: 11px; color: #464653;">
-                                Klick auf ein Bild öffnet die Großansicht
+                            <div style="font-size: 11px; color: #464653; flex-shrink: 0;">
+                                Klick auf ein Bild öffnet Großansicht
                             </div>
                         </div>
 
                         <!-- Rechteckiges Galerie-Raster (Große Vorschau) -->
-                        <div class="retro-sunken" style="background: #ffffff; padding: 14px; max-height: calc(100vh - 210px); min-height: 200px; overflow-y: auto;">
-                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr)); gap: 14px;">
+                        <div class="retro-sunken" style="flex: 1 1 0; min-height: 0; background: #ffffff; padding: 10px; overflow-y: auto; overflow-x: hidden;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); gap: 10px;">
                                 ${cardsHtml}
                             </div>
                         </div>
 
                         <!-- Statuszeile -->
-                        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; font-size: 11px; padding: 2px 6px; color: #464653;">
+                        <div style="flex-shrink: 0; display: flex; justify-content: space-between; gap: 4px; font-size: 11px; padding: 2px 6px; color: #464653;">
                             <span>13 Bildmotive geladen</span>
                             <span>Format: WebP HD | Dominik 40.0</span>
                         </div>
@@ -230,25 +230,29 @@ window.DOMINIK_MODULES.gallery = (function () {
                     return;
                 }
 
+                const stageStyle = isZoomed
+                    ? 'flex: 1 1 0; min-height: 0; min-width: 0; background: #111111; padding: 10px; overflow: auto; text-align: center;'
+                    : 'flex: 1 1 0; min-height: 0; min-width: 0; background: #111111; padding: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;';
+
                 const imgStyle = isZoomed
-                    ? 'max-height: none; max-width: none; width: auto; height: auto; box-shadow: 0 0 15px rgba(0,0,0,0.9); border: 1px solid #767684;'
-                    : 'max-height: calc(100vh - 240px); max-height: calc(100dvh - 240px); min-height: 180px; max-width: 100%; width: auto; object-fit: contain; box-shadow: 0 0 15px rgba(0,0,0,0.9); border: 1px solid #767684;';
+                    ? 'max-height: none; max-width: none; width: auto; height: auto; box-shadow: 0 0 15px rgba(0,0,0,0.9); border: 1px solid #767684; cursor: pointer; display: inline-block;'
+                    : 'max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; box-shadow: 0 0 15px rgba(0,0,0,0.9); border: 1px solid #767684; cursor: pointer; display: block;';
 
                 container.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="display: flex; flex-direction: column; height: 100%; min-height: 0; min-width: 0; gap: 6px;">
                         <!-- Navigations-Leiste -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; background: #e8e8e8; padding: 4px 8px;" class="retro-sunken">
-                            <button id="gallery-back-btn" class="retro-raised-btn" style="padding: 3px 12px; font-size: 11px; font-weight: bold; display: flex; align-items: center; gap: 4px;">
+                        <div class="retro-sunken" style="flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; gap: 6px; background: #e8e8e8; padding: 4px 8px; min-width: 0;">
+                            <button id="gallery-back-btn" class="retro-raised-btn" style="padding: 3px 10px; font-size: 11px; font-weight: bold; display: flex; align-items: center; gap: 4px; flex-shrink: 0; white-space: nowrap;">
                                 <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
-                                <span>Zurück zur Galerie</span>
+                                <span>Zurück<span class="gallery-back-rest"> zur Galerie</span></span>
                             </button>
 
-                            <div style="font-size: 12px; font-weight: bold; color: #000080; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; min-width: 0;">
+                            <div style="font-size: 12px; font-weight: bold; color: #000080; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; flex: 1 1 auto; min-width: 0; padding: 0 4px;">
                                 ${selectedIndex + 1} von ${items.length}: ${item.title}
                             </div>
 
-                            <div style="display: flex; gap: 4px; align-items: center;">
-                                <button id="gallery-zoom-btn" class="retro-raised-btn" style="padding: 2px 8px; font-size: 11px; display: flex; align-items: center; gap: 2px;" title="Zwischen Fensteranpassung und 100% Originalgröße wechseln">
+                            <div style="display: flex; gap: 4px; align-items: center; flex-shrink: 0;">
+                                <button id="gallery-zoom-btn" class="retro-raised-btn" style="padding: 2px 8px; font-size: 11px; display: flex; align-items: center; gap: 2px; white-space: nowrap;" title="Zwischen Fensteranpassung und 100% Originalgröße wechseln">
                                     <span class="material-symbols-outlined" style="font-size: 14px;">${isZoomed ? 'fit_screen' : 'zoom_in'}</span>
                                     <span>${isZoomed ? 'Einpassen' : '1:1 Zoom'}</span>
                                 </button>
@@ -258,27 +262,27 @@ window.DOMINIK_MODULES.gallery = (function () {
                         </div>
 
                         <!-- Große Bildansicht -->
-                        <div class="retro-sunken" style="background: #111111; padding: 12px; display: flex; align-items: center; justify-content: center; min-height: 440px; max-height: calc(100vh - 250px); overflow: auto;">
-                            <img id="gallery-main-img" src="${item.src}" alt="${item.title}" style="${imgStyle} cursor: pointer;" title="Klick zum Umschalten zwischen Fenstergröße und 100% Zoom">
+                        <div id="gallery-stage" class="retro-sunken" style="${stageStyle}">
+                            <img id="gallery-main-img" src="${item.src}" alt="${item.title}" style="${imgStyle}" title="${isZoomed ? 'Klick zum Einpassen' : 'Klick für 1:1 Zoom'}">
                         </div>
 
                         <!-- Informations- & Trivia-Box -->
-                        <div class="retro-sunken" style="background: #ffffff; padding: 12px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; border-bottom: 1px solid #e0e0e0; padding-bottom: 4px;">
-                                <div style="display: flex; align-items: center; gap: 6px;">
-                                    <span class="material-symbols-outlined" style="font-size: 20px; color: ${item.color};">${item.icon}</span>
-                                    <span style="font-size: 14px; font-weight: bold; color: #000080;">${item.title}</span>
+                        <div class="retro-sunken" style="flex-shrink: 0; background: #ffffff; padding: 8px 12px; min-width: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; border-bottom: 1px solid #e0e0e0; padding-bottom: 4px; gap: 8px; min-width: 0;">
+                                <div style="display: flex; align-items: center; gap: 6px; min-width: 0; overflow: hidden; flex: 1 1 auto;">
+                                    <span class="material-symbols-outlined" style="font-size: 18px; color: ${item.color}; flex-shrink: 0;">${item.icon}</span>
+                                    <span style="font-size: 13px; font-weight: bold; color: #000080; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.title}</span>
                                 </div>
-                                <div style="display: flex; gap: 6px; align-items: center;">
-                                    <span style="background: #e8e8e8; font-size: 11px; font-weight: bold; padding: 2px 8px; border: 1px solid #767684;">
+                                <div style="display: flex; gap: 6px; align-items: center; flex-shrink: 0;">
+                                    <span style="background: #e8e8e8; font-size: 10px; font-weight: bold; padding: 2px 6px; border: 1px solid #767684; white-space: nowrap;">
                                         ${item.category}
                                     </span>
-                                    <span style="background: #000080; color: #ffffff; font-size: 11px; font-weight: bold; padding: 2px 8px;">
+                                    <span style="background: #000080; color: #ffffff; font-size: 10px; font-weight: bold; padding: 2px 6px; white-space: nowrap;">
                                         Jahr: ${item.year}
                                     </span>
                                 </div>
                             </div>
-                            <p style="font-size: 12px; line-height: 1.5; color: #1a1c1c; margin: 0;">
+                            <p style="font-size: 11px; line-height: 1.4; color: #1a1c1c; margin: 0; max-height: 52px; overflow-y: auto;">
                                 ${item.desc}
                             </p>
                         </div>

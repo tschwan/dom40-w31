@@ -15,6 +15,7 @@ window.DOMINIK_MODAL = (function () {
         if (!programId) {
             overlayEl.classList.remove('open');
             bodyEl.innerHTML = '';
+            windowEl.removeAttribute('data-program');
             return;
         }
 
@@ -24,10 +25,11 @@ window.DOMINIK_MODAL = (function () {
             return;
         }
 
+        windowEl.setAttribute('data-program', programId);
         // Set dimensions & title
         const targetMaxWidth = mod.maxWidth || '800px';
         windowEl.style.setProperty('--window-max-width', targetMaxWidth);
-        windowEl.style.maxWidth = window.innerWidth <= 768 ? '100vw' : targetMaxWidth;
+        windowEl.style.maxWidth = window.innerWidth <= 768 ? '100%' : targetMaxWidth;
         if (titleLeftEl) {
             titleLeftEl.innerHTML = `
                 <span class="material-symbols-outlined">${mod.icon}</span>
@@ -114,7 +116,7 @@ window.DOMINIK_MODAL = (function () {
             if (activeId && windowEl) {
                 const mod = (window.DOMINIK_DATA?.modules || []).find(m => m.id === activeId);
                 const targetMaxWidth = mod?.maxWidth || '800px';
-                windowEl.style.maxWidth = window.innerWidth <= 768 ? '100vw' : targetMaxWidth;
+                windowEl.style.maxWidth = window.innerWidth <= 768 ? '100%' : targetMaxWidth;
             }
         });
     }

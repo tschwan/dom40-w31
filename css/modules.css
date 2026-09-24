@@ -127,3 +127,26 @@
         grid-template-columns: 1fr !important;
     }
 }
+/* Modul: GALLERY.EXE (Foto-Galerie) */
+.retro-window[data-program="gallery"] {
+    height: min(900px, calc(100vh - var(--taskbar-height) - 32px));
+    height: min(900px, calc(100dvh - var(--taskbar-height) - 32px));
+}
+.retro-window[data-program="gallery"] .window-body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 8px;
+}
+@media (max-width: 768px) {
+    .retro-window[data-program="gallery"] {
+        height: calc(100vh - var(--taskbar-height)) !important;
+        height: calc(100dvh - var(--taskbar-height)) !important;
+    }
+    .retro-window[data-program="gallery"] .window-body {
+        padding: 4px;
+    }
+    .gallery-back-rest {
+        display: none;
+    }
+}
