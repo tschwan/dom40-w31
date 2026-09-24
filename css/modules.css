@@ -321,4 +321,81 @@
         font-size: 11px;
     }
 }
+/* Modul: COMMAND.COM (MS-DOS Prompt) */
+.dos-terminal-box {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    padding: 12px;
+    min-height: 380px;
+    max-height: 480px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    cursor: text;
+}
+.dos-output-area {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+.dos-line {
+    font-size: 13px;
+    line-height: 1.35;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.dos-prompt-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+}
+.dos-prompt-text {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+.dos-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff66;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    flex: 1;
+    caret-color: #00ff66;
+    padding: 0;
+    margin: 0;
+}
+/* Modul: DEFRAG.EXE (Midlife-Defragmentierung) */
+.defrag-container {
+    user-select: none;
+}
+.defrag-grid {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2px;
+}
+.defrag-cluster {
+    aspect-ratio: 1 / 1;
+    min-height: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.15s;
+}
+@media (max-width: 768px) {
+    .defrag-grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .dos-line {
+        font-size: 11px;
+    }
+    .dos-prompt-text, .dos-input {
+        font-size: 11px;
+    }
+}
+
 

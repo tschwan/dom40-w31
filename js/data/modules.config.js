@@ -57,6 +57,15 @@ window.DOMINIK_DATA.modules = [
         menuLabel: '40-Jahre-Rechner'
     },
     {
+        id: 'biorhythm',
+        filename: 'BIORHYTHM.EXE',
+        title: 'Biorhythmus & Astrologie 1986',
+        icon: 'insights',
+        enabled: true,
+        maxWidth: '780px',
+        menuLabel: 'Biorhythmus & Astro-Report'
+    },
+    {
         id: 'games',
         filename: 'ARCADE86.EXE',
         title: 'Gaming-Highlights 1986',
@@ -91,6 +100,24 @@ window.DOMINIK_DATA.modules = [
         enabled: true,
         maxWidth: '840px',
         menuLabel: 'Teletext / Videotext 1986'
+    },
+    {
+        id: 'command',
+        filename: 'COMMAND.COM',
+        title: 'MS-DOS Eingabeaufforderung 3.30',
+        icon: 'terminal',
+        enabled: true,
+        maxWidth: '780px',
+        menuLabel: 'MS-DOS 3.30 Prompt'
+    },
+    {
+        id: 'defrag',
+        filename: 'DEFRAG.EXE',
+        title: 'MS-DOS Defragmentierer v40.0',
+        icon: 'memory',
+        enabled: true,
+        maxWidth: '820px',
+        menuLabel: 'Midlife-Defragmentierung'
     },
     {
         id: 'gallery',
