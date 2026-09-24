@@ -6,7 +6,19 @@ window.DOMINIK_MODULES.recycle = (function () {
     let selectedFileIndex = 0;
 
     function formatSizeTotal(items) {
-        return '7,91 MB';
+        let totalKb = 0;
+        items.forEach(item => {
+            const sizeStr = (item.size || '').replace(',', '.');
+            if (sizeStr.includes('MB')) {
+                totalKb += parseFloat(sizeStr) * 1024;
+            } else if (sizeStr.includes('KB')) {
+                totalKb += parseFloat(sizeStr);
+            }
+        });
+        if (totalKb >= 1024) {
+            return (totalKb / 1024).toFixed(2).replace('.', ',') + ' MB';
+        }
+        return Math.round(totalKb) + ' KB';
     }
 
     return {
@@ -122,7 +134,7 @@ window.DOMINIK_MODULES.recycle = (function () {
                             <div style="margin-top: 8px; font-size: 11px; color: #464653; display: flex; flex-wrap: wrap; gap: 8px;">
                                 <span>Datei: <strong>${file.filename}</strong></span>
                                 <span>Größe: <strong>${file.size}</strong></span>
-                                <span>Typ: <strong>PNG-Grafik</strong></span>
+                                <span>Typ: <strong>${file.filename.split('.').pop().toUpperCase()}-Grafik</strong></span>
                             </div>
                         </div>
                     `;
