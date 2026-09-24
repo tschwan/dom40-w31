@@ -12,7 +12,17 @@ window.DOMINIK_DATA.systemhelp = {
             'Data-Driven: Sämtliche Inhalte liegen isoliert in flachen Datenmodulen unter /js/data/.',
             'Single-Active-Window: Stabiles Fenster-Paradigma ohne fehleranfälligen Z-Index-Salat.',
             'Responsive Retro-Design: Gestochen scharfe CSS-3D-Bevels auf 4K/Retina sowie Touch-Optimierung für Mobilgeräte.'
-        ]
+        ],
+        aiDisclaimer: {
+            title: 'AMTLICHER DISCLAIMER ZUM EINSATZ VON KÜNSTLICHER INTELLIGENZ',
+            badge: '100% REINE HANDARBEIT (*ZWINKER ZWINKER*)',
+            paragraphs: [
+                'Hiermit wird an Eides statt feierlich und mit absolut unbewegter Miene versichert: Dominik OS 40.0 wurde zu 100 % in reiner, schweißtreibender Handarbeit auf einem originalen IBM PC-XT (Baujahr 1986) mit edlin.exe und einer verstaubten 2-Tasten-Kugelmaus gemeißelt.',
+                'Es wurden zu KEINEM Zeitpunkt hypermoderne, kaffeetrinkende KI-Coding-Agenten konsultiert, die in Sekundenschnelle vollständige Web-Audio-Synthesizer, 3D-Sternenfelder, Retro-Spiele oder pixelgenaue CSS-Bevels aus dem Äther gestampft haben. Niemals! Sowas gab es 1986 schließlich gar nicht!',
+                'Auch sämtliche hochauflösenden Porträts in der Gang-Galerie sowie die fliegenden Dominiks im Bildschirmschoner entstanden selbstverständlich durch wochenlanges, mühevolles Auftupfen jedes einzelnen Farbpixels bei Kerzenschein in Microsoft Paintbrush – und KEINESFALLS durch modernste KI-Bildgenerierungstools nach dem Motto "Generiere Dominik als Miami-Vice-Cop".',
+                'Jegliche Ähnlichkeit mit modernstem Prompt-Engineering, Deep Learning oder autonomen Entwickler-Agenten ist technisch völlig ausgeschlossen, reine Science-Fiction und wird von der Systemleitung unter heftigem, beidseitigem Augenzwinkern 😉 vehement dementiert.'
+            ]
+        }
     },
     modules: [
         {

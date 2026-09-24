@@ -9,12 +9,36 @@ window.DOMINIK_MODULES.systemhelp = (function () {
         return window.DOMINIK_DATA?.systemhelp || { modules: [], overview: {} };
     }
 
+    function renderDisclaimerBox(disc) {
+        if (!disc) return '';
+        return `
+            <div class="retro-window-frame" style="background: #ffffcc; border: 2px solid #b08000; padding: 12px; margin: 4px 0;">
+                <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px;">
+                    <span class="material-symbols-outlined" style="font-size: 32px; color: #b08000;">gavel</span>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                            <strong style="font-size: 13px; color: #805000;">${disc.title}</strong>
+                            <span class="retro-sunken" style="background: #ffe066; font-size: 9px; font-weight: 700; padding: 1px 6px; color: #402000; border: 1px solid #b08000;">
+                                ${disc.badge}
+                            </span>
+                        </div>
+                        <span style="font-size: 10px; color: #665500;">Aktenzeichen: KI-1986-2026 // Amtlich beglaubigte Unwahrheit</span>
+                    </div>
+                </div>
+                <div style="font-size: 11px; line-height: 1.5; color: #2a2000; display: flex; flex-direction: column; gap: 6px;">
+                    ${(disc.paragraphs || []).map(p => `<p style="margin: 0;">${p}</p>`).join('')}
+                </div>
+            </div>
+        `;
+    }
+
     function renderDetailPane(container, data) {
         const paneEl = container.querySelector('#sh-detail-pane');
         if (!paneEl) return;
+        const ov = data.overview || {};
+        const disc = ov.aiDisclaimer;
 
         if (currentSelectedId === 'overview') {
-            const ov = data.overview || {};
             paneEl.innerHTML = `
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="border-bottom: 2px solid #000080; padding-bottom: 6px;">
@@ -47,6 +71,9 @@ window.DOMINIK_MODULES.systemhelp = (function () {
                         </div>
                     </div>
 
+                    <!-- Fetter KI-Disclaimer -->
+                    ${renderDisclaimerBox(disc)}
+
                     <!-- Technische Leitplanken -->
                     <div class="retro-sunken" style="background: #ffffff; padding: 10px;">
                         <strong style="font-size: 12px; color: #000080; display: block; margin-bottom: 6px;">
@@ -58,6 +85,26 @@ window.DOMINIK_MODULES.systemhelp = (function () {
                     </div>
                 </div>
             `;
+            return;
+        }
+
+        if (currentSelectedId === 'disclaimer') {
+            paneEl.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="border-bottom: 2px solid #b08000; padding-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+                        <h2 style="font-size: 15px; color: #805000; margin: 0;">⚠️ AMTLICHER KI-DISCLAIMER</h2>
+                        <button id="sh-disc-back-btn" class="retro-raised-btn" style="padding: 2px 8px; font-size: 11px;">
+                            &lt; Zurück zur Übersicht
+                        </button>
+                    </div>
+                    ${renderDisclaimerBox(disc)}
+                </div>
+            `;
+            paneEl.querySelector('#sh-disc-back-btn')?.addEventListener('click', () => {
+                currentSelectedId = 'overview';
+                renderNavList(container, data);
+                renderDetailPane(container, data);
+            });
             return;
         }
 
@@ -139,6 +186,10 @@ window.DOMINIK_MODULES.systemhelp = (function () {
                 <span class="material-symbols-outlined" style="font-size: 16px; color: #000080;">home</span>
                 <strong style="color: #000080;">Übersicht & GitHub</strong>
             </div>
+            <div class="sh-nav-item ${currentSelectedId === 'disclaimer' ? 'selected' : ''}" data-id="disclaimer" style="display: flex; align-items: center; gap: 6px; padding: 5px 8px; cursor: pointer; font-size: 11px; border-bottom: 1px solid #e0e0e0; background: ${currentSelectedId === 'disclaimer' ? '#c8d8f8' : '#ffffea'};">
+                <span class="material-symbols-outlined" style="font-size: 16px; color: #b08000;">gavel</span>
+                <strong style="color: #805000;">⚠️ KI-Disclaimer (*wink*)</strong>
+            </div>
         `;
 
         modules.forEach(m => {
@@ -182,6 +233,9 @@ window.DOMINIK_MODULES.systemhelp = (function () {
                             <button id="sh-btn-home" class="retro-raised-btn" style="padding: 3px 8px; font-size: 11px; font-weight: 700;">
                                 📖 Übersicht
                             </button>
+                            <button id="sh-btn-disc" class="retro-raised-btn" style="padding: 3px 8px; font-size: 11px; font-weight: 700; color: #805000;">
+                                ⚠️ KI-Disclaimer
+                            </button>
                             <a href="${data.githubUrl}" target="_blank" rel="noopener noreferrer" class="retro-raised-btn" style="text-decoration: none; padding: 3px 8px; font-size: 11px; font-weight: 700; color: #000080; display: inline-flex; align-items: center; gap: 4px;">
                                 🌐 GitHub
                             </a>
@@ -224,6 +278,11 @@ window.DOMINIK_MODULES.systemhelp = (function () {
             // Toolbar-Buttons
             container.querySelector('#sh-btn-home')?.addEventListener('click', () => {
                 currentSelectedId = 'overview';
+                renderNavList(container, data);
+                renderDetailPane(container, data);
+            });
+            container.querySelector('#sh-btn-disc')?.addEventListener('click', () => {
+                currentSelectedId = 'disclaimer';
                 renderNavList(container, data);
                 renderDetailPane(container, data);
             });
