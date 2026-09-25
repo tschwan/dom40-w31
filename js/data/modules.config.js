@@ -12,6 +12,15 @@ window.DOMINIK_DATA.modules = [
         menuLabel: 'Dominik OS Setup Wizard'
     },
     {
+        id: 'greeting',
+        filename: 'GREETING.CRD',
+        title: 'Geburtstagskarte: Alles Gute Dominik!',
+        icon: 'celebration',
+        enabled: true,
+        maxWidth: '820px',
+        menuLabel: 'Geburtstagskarte (GREETING.CRD)'
+    },
+    {
         id: 'systemhelp',
         filename: 'HELP.HLP',
         title: 'Dominik OS 40.0 - Windows Hilfe',
