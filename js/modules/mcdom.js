@@ -63,6 +63,24 @@ window.DOMINIK_MODULES.mcdom = (function () {
         }
     }
 
+    function addSinToRecycleBin(sin) {
+        if (!sin) return;
+        window.DOMINIK_DATA = window.DOMINIK_DATA || {};
+        window.DOMINIK_DATA.recycleItems = window.DOMINIK_DATA.recycleItems || [];
+        const exists = window.DOMINIK_DATA.recycleItems.some(item => item.id === sin.id);
+        if (!exists) {
+            window.DOMINIK_DATA.recycleItems.unshift({
+                id: sin.id,
+                filename: sin.filename,
+                type: 'infected_sin',
+                sinData: sin,
+                size: '666 KB',
+                icon: 'coronavirus',
+                date: new Date().toLocaleDateString('de-DE') + ' ' + new Date().toLocaleTimeString('de-DE').slice(0, 5)
+            });
+        }
+    }
+
     function startScan(container) {
         scanState = 'scanning';
         scanProgress = 0;
@@ -104,6 +122,7 @@ window.DOMINIK_MODULES.mcdom = (function () {
             // Gegen Ende des Scans die eine ausgewählte Sünde aufspüren
             if (step === 12) {
                 foundSins = [targetSin];
+                addSinToRecycleBin(targetSin);
                 currentScanningFile = `⚠️ ALARM: ${targetSin.filename} entdeckt!`;
                 playAlarm();
             } else if (step < 12) {
@@ -116,7 +135,8 @@ window.DOMINIK_MODULES.mcdom = (function () {
                 clearInterval(scanTimer);
                 scanState = 'done';
                 foundSins = [targetSin];
-                currentScanningFile = `Suchlauf beendet: 1 akute Jugendsünde (${targetSin.name}) identifiziert!`;
+                addSinToRecycleBin(targetSin);
+                currentScanningFile = `Suchlauf beendet: "${targetSin.filename}" aufgespürt & in den Papierkorb verschoben!`;
                 renderUI(container);
             }
         }, 160);
@@ -233,7 +253,7 @@ window.DOMINIK_MODULES.mcdom = (function () {
                         <span class="material-symbols-outlined" style="font-size: 40px; color: #000080; margin-bottom: 6px;">troubleshoot</span>
                         <div style="font-size: 12px; font-weight: 700;">Keine aktiven Scan-Ergebnisse</div>
                         <div style="font-size: 11px; margin-top: 4px;">
-                            Klicken Sie auf <strong>"Jugendsünden-Scan starten"</strong>, um Festplatte C:\\ nach Vokuhila, Modern Talking und Mofa-Tuning zu durchleuchten.
+                            Klicken Sie auf <strong>"Jugendsünden-Scan starten"</strong>, um Festplatte C:\\ nach Blümchen, Tamagotchis, Baggy Pants, Counter-Strike und World of Warcraft zu durchleuchten.
                         </div>
                     </div>
                 `}
