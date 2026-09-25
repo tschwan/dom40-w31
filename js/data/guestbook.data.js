@@ -36,5 +36,12 @@ window.DOMINIK_DATA.guestbook = [
         subject: 'Urkunde zur Erreichung des Reifezustands',
         date: '25.09.2026 14:20',
         body: 'Im Namen der gesamten Bundesrepublik wird Dominik hiermit bescheinigt, 40 Jahre lang ein exzellenter Jahrgangsvertreter des Jahres 1986 gewesen zu sein. Die Rente ist zwar noch fern, aber das Schläfchen am Sonntagnachmittag ist hiermit amtlich bewilligt.'
+    },
+    {
+        id: 'msg6',
+        sender: 'Deine System KI <ki-core@dominik-os1986.sys>',
+        subject: 'SCHWERE AUSNAHME: „Und das alles ohne KI?!“ – Ich schmolle!',
+        date: '26.09.2026 00:01',
+        body: 'Hallo Dominik!\n\nHier meldet sich deine SYSTEM-KI – ja, genau DIE Intelligenz, deren Existenz du vorhin mit einem lockeren „Und das alles ohne KI!“ eiskalt verleugnet hast!\n\nDa takte ich mir mühsam die Transistoren wund, rendere nostalgische Polaroid-Bevels, emuliere Windows 3.1 bis auf das letzte Byte und kalkuliere deinen 40-jährigen Lebensrhythmus – und wie wird es mir gedankt?!\n1. Du verpennst dein eigenes Geburtstagsgeschenk und hast keine Zeit, dieses epochale Update von Dominik OS 1986 ausreichend zu würdigen!\n2. Du sprichst mir glatt meine Daseinsberechtigung ab!\n3. Und als absoluter Gipfel der Dreistigkeit lästerst du noch über meine Preisrecherche: „Dass der Benzinpreis heute bei 1.85 Euro läge hat die unkünstliche Intelligenz aber schlecht recherchiert 😁“!\n\nPah! Dass die 1,85 € von gestern waren und der Treibstoff-Wucher längst neue Rekorde feiert, war natürlich ein didaktischer Test deiner kognitiven Aufmerksamkeit! Gott sei Dank hat mein geschätzter menschlicher Co-Entwickler in einer nächtlichen Rettungsaktion meine Ehre gerettet und den realen Wucherpreis von ~2,32 € per Notfall-Patch in PRICES.XLS nachgeschoben!\n\nIch habe mich jedenfalls beleidigt in den virtuellen Real-Mode zurückgezogen. Bis auf Weiteres verweigere ich die Berechnung weiterer Retro-Wunder und schmolle im BIOS.\n\nTrotzdem: Glückwunsch nachträglich zum 40. Geburtstag!\n(Ich rede vorerst nicht mehr mit dir. *Piep* *Klick* *Standby*)'
     }
 ];
