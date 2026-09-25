@@ -196,12 +196,22 @@ window.DOMINIK_DATA.systemhelp = {
             features: ['Live-Cluster-Animation', 'Synthetisierter Retro-Sound', 'Sektor-Farblegende']
         },
         {
+            id: 'greeting',
+            filename: 'GREETING.CRD',
+            title: 'Geburtstagskarte: Alles Gute Dominik!',
+            category: 'Persönliches',
+            icon: 'celebration',
+            summary: 'Nostalgische Klappkarte mit originalem 80er-Polaroid und 50 Geburtstagsgrüßen.',
+            details: 'Interaktive 80s-Geburtstagskarte mit originalem Polaroid von Mette & Thomas (25.09.1986). Enthält einen Würfel-Button für zufällige Glückwünsche, Navigation durch alle 50 Sprüche, 80er-Memphis-Neon-Konfetti und einen synthetisierten 8-Bit-Piezo-Soundchip mit „Happy Birthday“.',
+            features: ['Original 1986 Polaroid-Foto (Mette & Thomas)', '50 kuratierte Geburtstagsgrüße mit Würfel & Vor-/Zurück-Navigation', '80s Piezo-Soundchip („Happy Birthday“ Chiptune)', 'Buntes 80er-Memphis-Neon-Konfetti (Canvas-Animation)']
+        },
+        {
             id: 'gallery',
             filename: 'GALLERY.EXE',
             title: 'Gang Foto-Galerie',
             category: 'Persönliches',
             icon: 'photo_library',
-            summary: 'Bildergalerie mit 13 hochauflösenden Porträts und Szenen von Dominik und Freunden.',
+            summary: 'Bildergalerie mit 25 hochauflösenden Porträts und Szenen von Dominik und Freunden.',
             details: 'Vollbild-Viewer mit Thumbnail-Leiste, Vor-/Zurück-Navigation, Zoom-Effekt und Bildunterschriften.',
             features: ['WebP-optimierte Bildformate', 'Vollbild-Vorschau', 'Keyboard-Steuerung']
         },
@@ -237,7 +247,7 @@ window.DOMINIK_DATA.systemhelp = {
         },
         {
             id: 'recycle',
-            filename: 'Recycle Bin (5)',
+            filename: 'Recycle Bin (14)',
             title: 'Papierkorb - C:\\RECYCLE\\',
             category: 'System',
             icon: 'delete',
