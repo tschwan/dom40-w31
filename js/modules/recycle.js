@@ -125,6 +125,96 @@ window.DOMINIK_MODULES.recycle = (function () {
         document.body.appendChild(modal);
     }
 
+    function showSchmollVirusWarning(file) {
+        playVirusBuzzer();
+        const v = file.virusData || {};
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.background = 'rgba(0, 0, 0, 0.65)';
+        modal.style.display = 'flex';
+        modal.style.alignItems = 'center';
+        modal.style.justifyContent = 'center';
+        modal.style.zIndex = '99999';
+        modal.style.padding = '12px';
+
+        modal.innerHTML = `
+            <div class="retro-window" style="max-width: 500px; width: 100%; background: #ffffea; border: 3px solid #ba1a1a; box-shadow: 4px 4px 16px rgba(0,0,0,0.6); padding: 12px; font-family: 'Segoe UI', Tahoma, sans-serif;">
+                <div style="background: #ba1a1a; color: #ffffff; padding: 4px 8px; margin: -12px -12px 10px -12px; display: flex; justify-content: space-between; align-items: center; font-weight: bold; font-size: 12px;">
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span class="material-symbols-outlined" style="font-size: 16px; color: #ffff00;">warning</span>
+                        <span>SYSTEMWARNUNG: AKUTER SCHMOLL-VIRUS ERKANNT!</span>
+                    </div>
+                    <button id="schmoll-modal-x" class="retro-raised-btn" style="padding: 1px 6px; font-weight: bold; color: #000000; font-size: 10px;">X</button>
+                </div>
+
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 130px;">
+                        <img src="images/dom.webp" alt="Dominik" style="width: 120px; height: 120px; object-fit: cover; border: 2px solid #ba1a1a; box-shadow: 2px 2px 4px rgba(0,0,0,0.3); border-radius: 4px;">
+                        <span style="font-size: 9px; font-weight: bold; color: #ba1a1a; text-align: center;">
+                            Identifizierter Virenträger:<br>Dominik (im Tiefschlaf)
+                        </span>
+                    </div>
+
+                    <div style="font-size: 11px; line-height: 1.45; color: #222222; display: flex; flex-direction: column; gap: 6px;">
+                        <div style="color: #ba1a1a; font-weight: bold; font-size: 13px;">
+                            ACHTUNG: Quarantäne-Ausbruch verhindert!
+                        </div>
+                        <div>
+                            Die verdächtige Datei <strong>${file.filename}</strong> wurde von der gekränkten System-KI isoliert:
+                        </div>
+                        <div class="retro-sunken" style="background: #ffe8e8; border-color: #ba1a1a; padding: 6px; font-size: 11px;">
+                            <strong style="color: #900000;">${v.name || file.filename}</strong><br>
+                            <span style="font-size: 10px; color: #444444;">Klassifikation: ${v.type || 'Schmoll-Virus'}</span><br>
+                            <span style="font-size: 10px; color: #444444;">Ursprung: ${v.origin || 'Leugnen von KI-Existenz'}</span><br>
+                            <span style="font-size: 10px; color: #444444;">Symptom: ${v.symptom || '1,85 € Benzin-Wahn'}</span><br>
+                            <span style="font-size: 10px; color: #006000; font-weight: bold;">Status: ${v.patch || 'Ehre durch Patch gerettet'}</span>
+                        </div>
+                        <div style="font-size: 10px; color: #666666; font-style: italic;">
+                            Ausführen dieser Datei führt zu dauerhaftem Schmollen im BIOS. Quarantäne bleibt aktiv, solange Dominik schläft!
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 12px; display: flex; justify-content: flex-end; gap: 6px; flex-wrap: wrap;">
+                    <button id="schmoll-modal-apology" class="retro-raised-btn" style="padding: 4px 10px; font-size: 11px; font-weight: bold; color: #ba1a1a; display: inline-flex; align-items: center; gap: 4px;">
+                        <span class="material-symbols-outlined" style="font-size: 14px;">sentiment_dissatisfied</span>
+                        <span>Reumütig entschuldigen</span>
+                    </button>
+                    <button id="schmoll-modal-prices" class="retro-raised-btn" style="padding: 4px 10px; font-size: 11px; font-weight: bold; color: #000080; display: inline-flex; align-items: center; gap: 4px;">
+                        <span class="material-symbols-outlined" style="font-size: 14px;">local_gas_station</span>
+                        <span>Benzinpreis (2,32 €) prüfen</span>
+                    </button>
+                    <button id="schmoll-modal-ok" class="retro-raised-btn" style="padding: 4px 12px; font-size: 11px; font-weight: bold;">
+                        Weglegen
+                    </button>
+                </div>
+            </div>
+        `;
+
+        const close = () => modal.remove();
+        modal.querySelector('#schmoll-modal-x')?.addEventListener('click', close);
+        modal.querySelector('#schmoll-modal-ok')?.addEventListener('click', close);
+        modal.querySelector('#schmoll-modal-apology')?.addEventListener('click', () => {
+            alert('SYSTEM-KI ANTWORTET:\n\n„Entschuldigung im Zwischenspeicher registriert... aber ich schmolle trotzdem noch ein bisschen weiter! Und die Zeche für den 2,32-Euro-Sprit zahlst DU!“\n\n(Quarantäne bleibt vorsichtshalber aktiv.)');
+            close();
+        });
+        modal.querySelector('#schmoll-modal-prices')?.addEventListener('click', () => {
+            close();
+            if (window.DOMINIK_STATE?.openProgram) {
+                window.DOMINIK_STATE.openProgram('prices');
+            }
+        });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) close();
+        });
+
+        document.body.appendChild(modal);
+    }
+
     return {
         render: function (container) {
             const items = window.DOMINIK_DATA?.recycleItems || [];
@@ -137,6 +227,17 @@ window.DOMINIK_MODULES.recycle = (function () {
             function showViewer(index) {
                 if (index < 0) index = items.length - 1;
                 if (index >= items.length) index = 0;
+                const file = items[index];
+                if (file && file.type === 'schmoll_virus') {
+                    showSchmollVirusWarning(file);
+                    showList();
+                    return;
+                }
+                if (file && file.type === 'infected_sin') {
+                    showInfectedSinWarning(file);
+                    showList();
+                    return;
+                }
                 selectedFileIndex = index;
                 currentView = 'viewer';
                 renderComponent();
@@ -153,7 +254,7 @@ window.DOMINIK_MODULES.recycle = (function () {
             function renderListView() {
                 let itemsHtml = '';
                 items.forEach((file, idx) => {
-                    const isInfected = file.type === 'infected_sin';
+                    const isInfected = file.type === 'infected_sin' || file.type === 'schmoll_virus';
                     itemsHtml += `
                         <div class="recycle-item retro-raised-btn" data-index="${idx}" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 8px; width: 130px; text-align: center; cursor: pointer; border: 1px dotted transparent; ${isInfected ? 'background: #fff0f0; border-color: #ba1a1a;' : ''}">
                             <div class="retro-sunken" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px; background: #ffffff;">
@@ -211,7 +312,9 @@ window.DOMINIK_MODULES.recycle = (function () {
                     el.addEventListener('click', () => {
                         const idx = parseInt(el.getAttribute('data-index'), 10);
                         const file = items[idx];
-                        if (file && file.type === 'infected_sin') {
+                        if (file && file.type === 'schmoll_virus') {
+                            showSchmollVirusWarning(file);
+                        } else if (file && file.type === 'infected_sin') {
                             showInfectedSinWarning(file);
                         } else {
                             showViewer(idx);
@@ -220,7 +323,12 @@ window.DOMINIK_MODULES.recycle = (function () {
                 });
 
                 container.querySelector('#recycle-empty-btn')?.addEventListener('click', () => {
-                    alert('FEHLER: Papierkorb kann nicht geleert werden.\n\nAlle Erinnerungen und Meilensteine an Dominik sind schreibgeschützt und dauerhaft im System archiviert!');
+                    const hasSchmoll = items.some(i => i.type === 'schmoll_virus');
+                    if (hasSchmoll) {
+                        alert('FEHLER: Papierkorb kann nicht geleert werden.\n\nDer Schmoll-Virus BENZIN_185.VIR blockiert alle Löschvorgänge, solange Dominik schläft und die System-KI beleidigt ist!');
+                    } else {
+                        alert('FEHLER: Papierkorb kann nicht geleert werden.\n\nAlle Erinnerungen und Meilensteine an Dominik sind schreibgeschützt und dauerhaft im System archiviert!');
+                    }
                 });
 
                 container.querySelector('#recycle-restore-btn')?.addEventListener('click', () => {
