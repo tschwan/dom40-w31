@@ -208,5 +208,23 @@ window.DOMINIK_DATA.modules = [
         enabled: true,
         maxWidth: '960px',
         menuLabel: 'Recycle Bin (14)'
+    },
+    {
+        id: 'gotchi',
+        filename: 'GOTCHI.EXE',
+        title: 'Dominik-Gotchi v1.0 (80er/90er Nerd-Edition)',
+        icon: 'smart_toy',
+        enabled: true,
+        maxWidth: '520px',
+        menuLabel: 'Dominik-Gotchi 1986'
+    },
+    {
+        id: 'mcdom',
+        filename: 'MC_DOM.EXE',
+        title: 'McDominik Anti-Sin Professional 1986',
+        icon: 'security',
+        enabled: true,
+        maxWidth: '780px',
+        menuLabel: 'McDominik Virenscanner'
     }
 ];

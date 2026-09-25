@@ -254,6 +254,26 @@ window.DOMINIK_DATA.systemhelp = {
             summary: 'Der virtuelle Papierkorb mit gelöschten Jugendsünden und Entwürfen.',
             details: 'Enthält archivierte Fotos, veraltete Bildgenerierungs-Prompts und nostalgische Textfragmente, die per Klick inspiziert werden können.',
             features: ['Dynamische Dateizählung', 'Dateivorschau im Explorer-Stil', 'Wiederherstellen-Gag']
+        },
+        {
+            id: 'gotchi',
+            filename: 'GOTCHI.EXE',
+            title: 'Dominik-Gotchi v1.0 (80er/90er Nerd-Edition)',
+            category: 'Nerd & DOS',
+            icon: 'smart_toy',
+            summary: 'Kultiges 90er-Tamagotchi im bunten Plastikei mit animiertem 8-Bit-Dominik.',
+            details: 'Halte den jungen 80er-Jahre-Computer-Nerd am Leben: Kalte Pizza & Dosen-Cola füttern, 5,25"-Disketten lochen, C64 zocken, per Akustikkoppler in BBS-Mailboxen einwählen und Tastatur-Schläfchen verordnen.',
+            features: ['Animiertes Pixel-Art-Canvas mit 80er-Sprite', 'Synthetisierte 8-Bit-Beeps & Audio-Effekte', 'Vitalwert-Balken & interaktive Nerd-Aktionen']
+        },
+        {
+            id: 'mcdom',
+            filename: 'MC_DOM.EXE',
+            title: 'McDominik Anti-Sin Professional 1986',
+            category: 'System',
+            icon: 'security',
+            summary: 'Retro-Virenscanner im Norton-/McAfee-Stil zum Aufspüren von 80er-Jahre-Jugendsünden.',
+            details: 'Durchforstet Festplatte C:\\ nach Vokuhila-Würmern, Modern-Talking-Trojanern, illegalem Mofa-Tuning und BRAVO Dr.-Sommer-Dateien. Bietet Quarantäne im Kult-Ordner sowie eine offizielle Absolutions-Urkunde.',
+            features: ['Live-Scan-Animation mit Diskettenratter-Sound', '7 kuratierte Jugendsünden mit Peinlichkeits-Rating', 'Absolutions-Urkunden-Modal zum Vergeben aller Sünden']
         }
     ]
 };
