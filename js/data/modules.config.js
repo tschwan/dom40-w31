@@ -226,5 +226,14 @@ window.DOMINIK_DATA.modules = [
         enabled: true,
         maxWidth: '780px',
         menuLabel: 'McDominik Virenscanner'
+    },
+    {
+        id: 'aiwars',
+        filename: 'AI_WARS.EXE',
+        title: 'AI WARS: Beleidigungs-Fechten 1986',
+        icon: 'swords',
+        enabled: true,
+        maxWidth: '840px',
+        menuLabel: 'AI WARS (Monkey Fechten)'
     }
 ];
