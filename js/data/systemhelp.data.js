@@ -247,7 +247,7 @@ window.DOMINIK_DATA.systemhelp = {
         },
         {
             id: 'recycle',
-            filename: 'Recycle Bin (14)',
+            filename: 'RECYCLE.BIN',
             title: 'Papierkorb - C:\\RECYCLE\\',
             category: 'System',
             icon: 'delete',
@@ -268,12 +268,12 @@ window.DOMINIK_DATA.systemhelp = {
         {
             id: 'mcdom',
             filename: 'MC_DOM.EXE',
-            title: 'McDominik Anti-Sin Professional 1986',
+            title: 'McDominik Anti-Sin Professional',
             category: 'System',
             icon: 'security',
-            summary: 'Retro-Virenscanner im Norton-/McAfee-Stil zum Aufspüren von 80er-Jahre-Jugendsünden.',
-            details: 'Durchforstet Festplatte C:\\ nach Vokuhila-Würmern, Modern-Talking-Trojanern, illegalem Mofa-Tuning und BRAVO Dr.-Sommer-Dateien. Bietet Quarantäne im Kult-Ordner sowie eine offizielle Absolutions-Urkunde.',
-            features: ['Live-Scan-Animation mit Diskettenratter-Sound', '7 kuratierte Jugendsünden mit Peinlichkeits-Rating', 'Absolutions-Urkunden-Modal zum Vergeben aller Sünden']
+            summary: 'Retro-Virenscanner im Norton-/McAfee-Stil zum Aufspüren von Jugendsünden der Jahre 1994 bis 2004 (Alter 8 bis 18).',
+            details: 'Durchforstet Festplatte C:\\ nach Blümchen-Raves, Tamagotchi-Dramen, Zahnspangen-Recherchen in der BRAVO, Baggy Pants, gelb gebleichten Strähnchen, Counter-Strike-Team-Flashbangs auf de_dust2, KaZaA-Fehldownloads und durchgezockten WoW-Nächten vor Ragnaros.',
+            features: ['Zufällige Einzelsünden-Erkennung mit Diskettenratter-Sound', '8 authentische Jugendsünden aus Dominiks Jugend (1994–2004)', 'Absolutions-Urkunden-Modal zum Vergeben aller Sünden']
         }
     ]
 };

@@ -202,12 +202,12 @@ window.DOMINIK_DATA.modules = [
     },
     {
         id: 'recycle',
-        filename: 'Recycle Bin (14)',
+        filename: 'RECYCLE.BIN',
         title: 'Papierkorb - C:\\RECYCLE\\',
         icon: 'delete',
         enabled: true,
         maxWidth: '960px',
-        menuLabel: 'Recycle Bin (14)'
+        menuLabel: 'Papierkorb (RECYCLE.BIN)'
     },
     {
         id: 'gotchi',

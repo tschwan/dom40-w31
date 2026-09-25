@@ -77,13 +77,13 @@ window.DOMINIK_MODULES.mcdom = (function () {
         const targetSin = allSins[Math.floor(Math.random() * allSins.length)];
 
         const dummyFiles = [
-            'C:\\SCHULE\\MATHEHEFT.DAT',
-            'C:\\SPORTSCHRANK\\ADIDAS_SCHUHE.SYS',
-            'C:\\KASSETTEN\\MIXTAPE_RADIO_HR3.WAV',
-            'C:\\FAHRRAD\\BONANZARAD.DRV',
-            'C:\\ZIMMER\\BRAVO_POSTER_SAMANTHA_FOX.GIF',
-            'C:\\SPIELPLATZ\\KNALLERBSEN.COM',
-            'C:\\FERNSEHER\\WETTEN_DASS_1986.AVI'
+            'C:\\SCHULE\\HAUSAUFGABEN_HEFT_1997.DAT',
+            'C:\\LANPARTY\\CS15_DE_DUST2.DEM',
+            'C:\\HANDY_NOKIA_3310\\SNAKE_HIGHSCORE.SAV',
+            'C:\\SCHULRANZEN\\DIDDL_SAMMELBLOCK.DOC',
+            'C:\\WOW\\MOLTEN_CORE_SCREENSHOTS_2004.JPG',
+            'C:\\ICQ_MESSENGER\\CONTACT_LIST_2001.UIN',
+            'C:\\TEAMSPEAK\\SERVER_RAID_LOGIN.CFG'
         ];
 
         if (scanTimer) clearInterval(scanTimer);
@@ -285,19 +285,19 @@ window.DOMINIK_MODULES.mcdom = (function () {
         modal.innerHTML = `
             <div class="retro-window" style="max-width: 520px; width: 100%; background: #ffffea; border: 3px solid #000080; padding: 14px; box-shadow: 4px 4px 12px rgba(0,0,0,0.5);">
                 <div style="border-bottom: 2px solid #000080; padding-bottom: 6px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-                    <strong style="color: #000080; font-size: 13px;">📜 AMTLICHE ABSOLUTIONS-URKUNDE 1986</strong>
+                    <strong style="color: #000080; font-size: 13px;">📜 AMTLICHE ABSOLUTIONS-URKUNDE (1994–2004)</strong>
                     <button id="absolution-close-btn" class="retro-raised-btn" style="padding: 1px 6px; font-weight: 700;">X</button>
                 </div>
                 <div style="font-size: 11px; line-height: 1.6; color: #2a2000;">
                     <p style="margin: 0 0 8px 0;"><strong>Hiermit wird amtlich beglaubigt:</strong></p>
                     <p style="margin: 0 0 8px 0;">
-                        Dem Systembenutzer <strong>Dominik</strong> werden hiermit sämtliche Vergehen der Jahre 1986 bis 1999 – inklusive Vokuhila-Haarschnitt, überlautem Hören von <em>Cheri Cheri Lady</em>, getunten Mofa-Krümmern und ballonseidenen Jogginganzügen – in vollem Umfang vergeben.
+                        Dem Systembenutzer <strong>Dominik</strong> werden hiermit sämtliche Vergehen der Jugendjahre <strong>1994 bis 2004 (im Alter von 8 bis 18 Jahren)</strong> – inklusive Blümchen-Rave, Tamagotchi-Drama, Zahnspangen-Recherchen in der BRAVO, Baggy Pants in den Kniekehlen, gelb gebleichten Strähnchen, fehlgeleiteten Counter-Strike-Team-Flashbangs auf de_dust2 und durchgezockten World-of-Warcraft-Nächten vor Ragnaros – in vollem Umfang vergeben.
                     </p>
                     <p style="margin: 0 0 8px 0;">
-                        Die Taten gelten ab sofort nicht mehr als <em>"peinliche Fehltritte"</em>, sondern als <strong>hochwertiges, unantastbares 80er-Jahre-Kulturgut</strong>.
+                        Die Taten gelten ab sofort nicht mehr als <em>"peinliche Fehltritte"</em>, sondern als <strong>hochwertiges, unantastbares 90er- & 2000er-Kulturgut</strong>.
                     </p>
                     <div style="border-top: 1px dashed #b08000; padding-top: 6px; display: flex; justify-content: space-between; font-size: 10px; color: #555555;">
-                        <span>Ausgestellt durch: McDominik SinDef 1.0</span>
+                        <span>Ausgestellt durch: McDominik Anti-Sin 2.0</span>
                         <span>Stempel: GÜLTIG BIS ZUM 80. GEBURTSTAG</span>
                     </div>
                 </div>
