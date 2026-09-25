@@ -3,7 +3,7 @@ window.DOMINIK_DATA = window.DOMINIK_DATA || {};
 
 window.DOMINIK_DATA.prices = [
     { product: '1 Kugel Speiseeis', dm1986: '0,30 DM', eur1986: '0,15 €', eurToday: '2,00 €', factor: '+1233%' },
-    { product: '1 Liter Benzin (Normal)', dm1986: '0,98 DM', eur1986: '0,50 €', eurToday: '1,85 €', factor: '+270%' },
+    { product: '1 Liter Benzin (Normal)', dm1986: '0,98 DM', eur1986: '0,50 €', eurToday: '2,329 €', factor: '+366%' },
     { product: '1 Maß Bier (Oktoberfest)', dm1986: '6,40 DM', eur1986: '3,27 €', eurToday: '15,20 €', factor: '+365%' },
     { product: '1 Kinokarte', dm1986: '6,50 DM', eur1986: '3,32 €', eurToday: '13,50 €', factor: '+307%' },
     { product: '1 Döner Kebab', dm1986: '3,50 DM', eur1986: '1,79 €', eurToday: '7,50 €', factor: '+319%' },
